@@ -1,0 +1,66 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual C# Express 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Stellarmap", "Stellarmap\Stellarmap.csproj", "{A334BDC0-CA94-4AA4-91FA-31B90E1B00A7}"
+	ProjectSection(ProjectDependencies) = postProject
+		{5B01BBB0-3060-4F1A-B413-5B80DB1D54C9} = {5B01BBB0-3060-4F1A-B413-5B80DB1D54C9}
+	EndProjectSection
+	ProjectSection(WebsiteProperties) = preProject
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.Debug = "False"
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LPCParser", "LPCParser\LPCParser.csproj", "{C6FE401F-05E3-4C56-B4A4-A2CDFC85646E}"
+	ProjectSection(WebsiteProperties) = preProject
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.Debug = "False"
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ParserTester", "ParserTester\ParserTester.csproj", "{5B01BBB0-3060-4F1A-B413-5B80DB1D54C9}"
+	ProjectSection(WebsiteProperties) = preProject
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.Debug = "False"
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Stellarmap_HelpFiles", "Stellarmap_HelpFiles\Stellarmap_HelpFiles.csproj", "{C8A60909-B332-4EFC-97FF-0DD0EEC47EA4}"
+	ProjectSection(WebsiteProperties) = preProject
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.Debug = "False"
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		DSRelease|Any CPU = DSRelease|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A334BDC0-CA94-4AA4-91FA-31B90E1B00A7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A334BDC0-CA94-4AA4-91FA-31B90E1B00A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A334BDC0-CA94-4AA4-91FA-31B90E1B00A7}.DSRelease|Any CPU.ActiveCfg = DSRelease|Any CPU
+		{A334BDC0-CA94-4AA4-91FA-31B90E1B00A7}.DSRelease|Any CPU.Build.0 = DSRelease|Any CPU
+		{A334BDC0-CA94-4AA4-91FA-31B90E1B00A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A334BDC0-CA94-4AA4-91FA-31B90E1B00A7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C6FE401F-05E3-4C56-B4A4-A2CDFC85646E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C6FE401F-05E3-4C56-B4A4-A2CDFC85646E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C6FE401F-05E3-4C56-B4A4-A2CDFC85646E}.DSRelease|Any CPU.ActiveCfg = DSRelease|Any CPU
+		{C6FE401F-05E3-4C56-B4A4-A2CDFC85646E}.DSRelease|Any CPU.Build.0 = DSRelease|Any CPU
+		{C6FE401F-05E3-4C56-B4A4-A2CDFC85646E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C6FE401F-05E3-4C56-B4A4-A2CDFC85646E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5B01BBB0-3060-4F1A-B413-5B80DB1D54C9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5B01BBB0-3060-4F1A-B413-5B80DB1D54C9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5B01BBB0-3060-4F1A-B413-5B80DB1D54C9}.DSRelease|Any CPU.ActiveCfg = DSRelease|Any CPU
+		{5B01BBB0-3060-4F1A-B413-5B80DB1D54C9}.DSRelease|Any CPU.Build.0 = DSRelease|Any CPU
+		{5B01BBB0-3060-4F1A-B413-5B80DB1D54C9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5B01BBB0-3060-4F1A-B413-5B80DB1D54C9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C8A60909-B332-4EFC-97FF-0DD0EEC47EA4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C8A60909-B332-4EFC-97FF-0DD0EEC47EA4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C8A60909-B332-4EFC-97FF-0DD0EEC47EA4}.DSRelease|Any CPU.ActiveCfg = DSRelease|Any CPU
+		{C8A60909-B332-4EFC-97FF-0DD0EEC47EA4}.DSRelease|Any CPU.Build.0 = DSRelease|Any CPU
+		{C8A60909-B332-4EFC-97FF-0DD0EEC47EA4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C8A60909-B332-4EFC-97FF-0DD0EEC47EA4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
