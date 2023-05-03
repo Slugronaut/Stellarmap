@@ -1,0 +1,4 @@
+Keep this list in case you have to remove them from the project properties at any point
+
+xcopy "$(ProjectDir)assets" "$(ProjectDir)$(OutDir)assets" /v /e /d  /y
+

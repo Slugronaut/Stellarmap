@@ -1,0 +1,47 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<HTML>
+<HEAD>
+<meta name="GENERATOR" content="Microsoft&reg; HTML Help Workshop 4.1">
+<Title>Items: General Tab</Title>
+</HEAD>
+<BODY>
+<h1>Item Generator: General Tab</h1>
+<p>
+This tab contains features that identify and describe the item for players.
+<p>
+
+<h3>Key Name</h3>
+<p>
+<i>SetKeyName(sting)</i><br /><br />
+Sets the proper name of the object that is seen when players are looking at or using it. Names like 'sword', 'broom of destiny', or 'large beach towel' are typically used here.
+</p><br />
+
+<h3>Short Desc</h3>
+<p>
+<i>SetShort(string)</i><br /><br />
+A short description of the object. This text is usually seen when the player is viewing the item in a room or their inventory. It should almost always be the key name but with an article in front of it. For example, the above-mentioned key names would have shorts like 'a sword', 'a broom of destiny' (if the item is unique 'The' would be acceptable in place of 'a'), and 'a large beach towel'.
+</p><br />
+
+<h3>Long Description</h3>
+<p>
+<i>SetLong(string)</i><br /><br />
+A full description of the item that is seen when a player examines it more closely. Feel free to go wild here.
+</p><br />
+
+<h3>IDs</h3>
+<p>
+<i>SetId(array)</i><br /><br />
+An internal list of names that the player can use to reference the object. These name are never displayed to the player. However, care must be taken that they make sense and cover all the likely posibilties of how a player might try to reference the object. These can be used in tandem with Adjectives (see below). As examples, if you have an object with the key name 'Socom Pistol' and in the long description the gun is described as being a .45 then you might want to add pistol, socom, and .45 to the list as three seperate entries.
+</p>
+<p>
+In addition to being the identifier mechanism for player commands, Ids are also used as the identifier for keys that unlock doors. One of the entries should be set as a key that matches the key-value for the door or doors it is meant to unlock.
+</p><br />
+
+<h3>Adjectives</h3>
+<p>
+<i>SetAdjectives(array)</i><br /><br />
+This works in tandem with the ids of the object to help clarify which item a player it trying to access. For example, if there are two pistols in a room and both have the id 'pistol' then one might have the adjectives 'water' and 'squirt' while the other might have 'megadeath'. In this way the player can tell the game whether they want to equip the squirt pistol or the megadeath pistol.
+</p><br />
+
+</BODY>
+</HTML>

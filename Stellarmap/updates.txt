@@ -1,0 +1,99 @@
+﻿
+August 28th, 2011
+-<SM> Added jailcell for roomtypes
+-<SM> Re-enabled 'Set Tracks Allowed'
+-Fixed cost generation to take into account the fact that wieghtsin DS are in hundreths of a pound, not tenths
+-Movement for Sentients' heartbeats can now be set to zero to disable movement
+
+
+November 28th, 2010
+-<SM> Added 'Block NPCs from Entering' to room properties tab. This allows you to disallow NPCs from wandering into or spawning within that room.
+-Fixed NPC heartbeat move rate so that it can now be set to zero, allowing stationary sentients to be created.
+-Raised vendors' 'Max Items' upper limit from 100 to 1000.
+-Fixed a bug in the master include.h file generator that was incorrectly generating the root directory of the domain.
+-Added 'none' to the gender list in the config file.
+
+
+August 11, 2010
+-<SM> 'alien quad' race changed to 'alien quadruped' in config file
+-<SM>attachments in firearm generator now have their key values correctly set as strings
+-<SM>-add LIB_POLICE with 'SetJailRoom()' and SetPrecinct() inputs
+-<SM> and <DS> (note that only LIB_ROOM and LIB_SHOP are useful for DS): added LIB_ROOM, LIB_INSTANCEROOM, LIB_STORE, LIB_POLICEOFFICE to room editor. You can select which by using the full 'Create Room' menu rather than the quick version.
+-<SM>add SetWearLevel() to armor generator
+-<SM>firearm and magazine ammotypes can now be typed or selected from a list
+-'SetEmoteResponses' is now spelled correctly in inheritednpcs.xml
+-SetDayLight() and SetNightLight() can now be set for rooms
+-Fixed quirk with Day/Night settings being disabled after loading a room that uses them
+-When using the lareg text editor window you can now simply type unescaped single quotes and use the enter key to add new lines. Upon closing the the window they will be properly escaped and formatted
+-a new custom control has been added. The 'ComboSelctionTypeable' control. It is exactly like the 'ComboSelection' control but allows the user to type text into it as well
+
+
+
+July 14, 2010
+-config file fixes:
+	-SetMealMessages() is now spelled properly in itemsconfig.xml
+	-<SM>Stellarmass alien race list now complete in config.xml
+	-Fixed spelling of 'respirationtypes' list in config.xml
+-NPC generator should now not generate additional, unwanted, and empty function calls for SetSkill(), SetStat(), SetAction(), and SetCombatAction()
+-Added Respiration Types to room editor
+-IMPORTANT: replaced the literal escape character '$' with '~' in the hopes that it will cause fewer conflicts
+-NumberEntry function control now has 'DecimalPlaces' property to reflect the same feature in the NumericalUpDown control within it.
+-Dynamically generated NumberEntry function controls now use 'min', 'max', 'inc', and 'decimalplaces' attributes in config files
+-room editor's 'Gravity' control now takes decimal values
+
+
+
+June 29, 2010
+-<SM> Added several new races that are useful for mobs. Stuff like bipedal creatures and insects
+
+
+June 25, 2010
+-Added default short and long descriptions to doors.
+-Okay! Vendors now have '#include <vendor_types.h>' for realz this time~
+-<SM> firearms and ammo have '#include <firearm.h>' inserted
+-meals have '#include <meal_types.h>' inserted
+-fixed misspelling of SetMealMessages() i generated meals
+-NOTE: It has come to my attention that the default meal message text starts with an '$' which then escapes the whole
+ sequence and makes it a literal rather than a string. There isn't really a good way to fix this so For now, you can simply
+ just get around this by changing to an escaped literal string. Just put quaotes around the wole thing and another '$' at the
+ beginning. like so: <code>$N consumes $P meal.</code> will in stead be <code>$"$N consumes $P meal."</code>
+
+
+June 24, 2010
+-All NPCs now have SetLevel() generated <i>after</i> SetRace() and SetClass(). This is because Stellarmass was moddedn
+ in such a way that hp, mp, and st depend on stats from both class and race in order to receive the proper values.
+-Re-compiled to targert .NET 2.0 instead of .NET 4.0 Seriouly VS 2010, what the hell?!
+-Fixed NPC generators so that SetAction() and SetCombatAction() actually take an array like they are supposed to.
+-Added SetEmoteResponses(), SetConsultResponses(), and SetRequestResponses() to the inheritednpcs.xml file. All sentient
+ generators now have these functions available to them.
+
+June 15th, 2010
+-<SM> Added 'Leave Tracks' to room properties tab
+-<SM> Added 'Wield Level' to item generator
+-<SM> Added keypads, keycards, and card swipes to item generator list
+-Added more entries for help files
+
+
+June 11, 2010
+-Added #include<vendor_types.h> to code for vendors and barkeeps
+-Removed an unneeded 'SetLocalCurrency()' call in barkeeps
+-Extended and improved the help files. It now explains all of the controls for the room editor and item generator. More to come soon.
+-added a <disable> tag to the itemconfig parser. You can now have inherited items and armors disable certain functions that are part of the generic item/armor interface. Useful for stellarmass firearms since creators should never manually set their inventories.
+-modified the itemsconfig.xml file to use the new <disable> tag. SetInventory is now disabled for firearms and ammo.
+-moved a few more controls around in the item generator so that everything related to inventory and LIB_STORAGE is on the same tab.
+-for item and armor generator, I have replaced the checkboxes for SetPreventDrop(), SetPreventGet(), and SetPreventPut(). They can now either take a text entry that is displayed when the player tries to get/put/drop the item and fails; or it can take an escaped functional name. If left blank the the item can be picked up/gotten/dropped as normal.
+-added 'Meal' to the save path selection list for generated items. How the hell did I gorget that one?
+-When a group of rooms is hilighted and the middle mouse button is held down in order to scroll the view, the selection group is now preserved
+
+
+
+June 6, 2010
+-fixed the width for the vendor type selection box in the item and armor generators
+-removed some forgetten breakpoints in the source code
+-added fix that removed the extra empty define in include files.
+-'unknown' directory is no longer generated when creating a domain workspace.
+-added fix that removes unwanted 'inherit LIB_ITEM' when making an object a container with 'inherit LIB_STORAGE'.
+-added inventory support for items created in the item generator
+-opacity for containers in item generator
+-actually started making use of my version count. Now displayed in the about box
+-added support email address to about box

@@ -1,0 +1,56 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<HTML>
+<HEAD>
+<meta name="GENERATOR" content="Microsoft&reg; HTML Help Workshop 4.1">
+<Title>Weapon Stats</Title>
+</HEAD>
+<BODY>
+<h1>Item Generator: Weapon Stats</h3>
+<p>
+All items have the default ability to be used as a weapon. The idea is that you could technically stab someone with a key or bludgeon them with a book if you needed to in a pinch. Here is where you can define such damage properties. Keep in mind, this <b>does not affect firearms' shooting properties</b>. For that you need to create a firearm item and go to the Inherited Properties tab. However, this <i>does</i> allow you to set the damage properties of a firearm's melee attack mode.
+</p>
+
+<h3>Damage Types</h3>
+<p>
+<i>SetDamageType(int)</i><br /><br />
+The total combine types of damage dealt by this weapon. You can select multiple damage types to combine effects. For example, a flaming sword might be HEAT and BLADE. An explosive shotgun round might be BALLISTIC, HEAT, and TRUAMA. Carrot Top's comedy routine might deal EMOTIONAL and TRUAMA damage.  In some cases armor may only protect against certain typres of damage and if it doesn't cover a category declared for the weapon then some of that damage 'slips through' unchanged.
+</p><br />
+
+<h3>Custom Properties</h3>
+<p>
+<i>SetProperties(mapping)</i><br /><br />
+Simply applies anyadditional properties. Some properties may simply be for storing additional data for specific in-game use. There are, however, a few pre-defined properties for items in DS. Check this page for properties pretaining to items. <a href="http://dead-souls.net/docs/build/Properties">http://dead-souls.net/docs/build/Properties</a>
+</p><br />
+
+<h3>Max Damage</h3>
+<p>
+<i>SetClass(int)</i><br /><br />
+The maximum damage that a weapon might deal before being adjusted by character stats and randomness. The final in-game value may be higher or lower depending on skills, stats, random numbers, and other combat situations.
+</p><br />
+
+<h3>Hands Required</h3>
+<p>
+<i>SetHands(int)</i><br /><br />
+The number of free hands needed to wield this item as a weapon
+</p><br />
+
+<h3>Value Half-Life</h3>
+<p>
+<i>SetDamagePoints(int)</i><br /><br />
+The number of points of damage this item can take before it's value decreases by half. When they reach zero they are reset.
+</p><br />
+
+<h3>Wield Message</h3>
+<p>
+<i>SetWield(string)</i><br /><br />
+The message displayed to the user when they wield this item as a weapon. If empty the default wield message will be displayed.
+</p><br />
+
+<h3>Wield Level</h3>
+<p>
+<i>SetWieldLevel(int) <b>Stellarmass-only Feature</b></i><br /><br />
+The minimum level a character must be in order to wield this item as a weapon.
+</p><br />
+
+</BODY>
+</HTML>

@@ -1,0 +1,89 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<HTML>
+<HEAD>
+<meta name="GENERATOR" content="Microsoft&reg; HTML Help Workshop 4.1">
+<Title>Item Generator: Firearm Tab</Title>
+</HEAD>
+<BODY>
+<h1>Item Generator: Firearm Inherited Features</h1>
+<p>These properties control how the weapon behaves when fired during combat. Take notice of the differences and similarities between this and the regular Weap Stats Tab. Remember, the Weapon Stats tab control how the firearm works if it is used as melee weapon by switching the attack mode. This tab controls the actual firing properties.</p>
+
+<h3>Max Damage</h3>
+<p>
+<i>SetGunClass(int)</i><br /><br />
+The maximum damage dealt by a single shot before being adjusted by skills, stats, combat environment, ammo, number of shots fired, accuracy of the weapon, or randomness.
+</p><br />
+
+<h3>Ammo Type</h3>
+<p>
+<i>SetAmmoClass(string)</i><br /><br />
+Identifies what types of ammo can be used in this weapon. Ammo that can be used will have the same value set for its Ammo Type as well.
+</p><br />
+
+<h3>Gun Damage Type</h3>
+<p>
+<i>SetGunDamageType(int)</i><br /><br />
+The same deal as regular Damage Types for a weapon, only this applies to the weapo being shot. See the Damage Type entry in <a href="itemgenerator_WeaponStats.htm">Weapon Stats</a> for more details.
+</p><br />
+
+<h3>Gun Size</h3>
+<p>
+<i>SetGunSize(int)</i><br /><br />
+Determines the size of the gun in relation to holsters. Holsters designed to hold guns will have a min and max range they can accept. If this object is outside that range then it won't fit in the holster.
+<ul>
+   <li>GUNSIZE_NULL - n/a</li>
+   <li>GUNSIZE_TINY    - deringer sized</li>
+   <li>GUNSIZE_SMALL    - pistols, sub-machine guns, sawn-offs, maybe some tiny carbines</li>
+   <li>GUNSIZE_MEDIUM    - most carbines, shotguns, many assult rifles</li>
+   <li>GUNSIZE_LARGE    - some large assult rifles, sniper rifles</li>
+   <li>GUNSIZE_HUGE    - mounted gun / or shoulder weapon (rocket launcher)</li>
+   <li>GUNSIZE_MASSIVE    - think cannon</li>
+   <li>GUNSIZE_RIDICULOUS    - ICBM missile maybe?</li>
+   <li>GUNSIZE_WTF	    - hell, I'm just being goofy now... Death Star I guess :D</li>
+</ul>
+</p><br />
+
+<h3>Attachments</h3>
+<p>
+<i>SetAcceptedAttachments(mapping)</i><br /><br />
+Largely unused at this time. It allows you to specify what types of attachment this weapon takes. Technically there is a silencer and scope object but neither of them do anything at this time.
+</p><br />
+
+<h3>Firemodes</h3>
+<p>
+<i>SetCapableFiremodes(int)</i><br /><br />
+Sets a combination of firemodes that the weapon supports. Players can switch through the modes using the 'firemode' command.  The first three modes fire 1, 2, and 3 shots per attack. The fourth mode by default is four but can be changed with User Firerate.
+</p><br />
+
+<h3>User Fireate</h3>
+<p>
+<i>SetUserRate(int)</i><br /><br />
+The rate of fire if a weapon is allowed to be switched into the fourth firemode known as 'user rate'.
+</p><br />
+
+<h3>Accuracy</h3>
+<p>
+<i>SetAccuracy(int)</i><br /><br />
+The percentage chance that the weapon will hit the target the player aimed for. This is not affected by player skill at all and is only used in combat calculations after all other values have been determined. Bascially, it is the accuracy of the weapon ie: the ability for it to put the bullet where the shooterr aimed.
+</p><br />
+
+<h3>Accuracy Dropoff</h3>
+<p>
+<i>SetAccuracyDropoff(int)</i><br /><br />
+The ammount of accuracy to loose for each successive shot fired when the firemode of the weapon is something other that single-shot. For example, if the firemode is FIREMODE_BURST with three shots per attack, and the starting accuracy is 100% and this value is 10 then each shot will be at 100%, 90%, and 80% accuracy respectively.
+</p><br />
+
+<h3>Round Based</h3>
+<p>
+<i>SetMagIsRound(int)</i><br /><br />
+Determines the arch-type of the weapon. If set the weapon uses ammo as a single round and stored those round internally one at a time. The weapon itself is responsible for tracking ammo count. Useful for things like shotguns, crossbows, and rocket launchers were each round must be manually loaded and no magazines are used. If not set the the ammo is treated as a magazine instead and the ammo count comes from the ammo object.
+</p><br />
+
+<h3>Max Rounds</h3>
+<p>
+<i>SetMaxRounds(int)</i><br /><br />
+Only used if Round Based is checked. This determines how many round can be loaded into the weapon. For example, a revolver might only let six be loaded.
+</p><br />
+
+</BODY>
+</HTML>

@@ -1,0 +1,54 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<HTML>
+<HEAD>
+<meta name="GENERATOR" content="Microsoft&reg; HTML Help Workshop 4.1">
+<Title>Item Generator: Meal Tab</Title>
+</HEAD>
+<BODY>
+<h1>Item generator: Meal Inherited Features</h1>
+<p>These properties set what type of meal an object is as well as how much health, stamina, and/or magic points are regained from it. Consumption messages and descriptions for empty containers are also here. The default action for food is to regenerate health when consumed, for drinks stamina is regained, and for pill it is skill power (magic points). It is important that you do not set the strength too high in cases of food, drink. The player cannot cosume more than their belly holds. Food and drink have a maximum of 100 but Stellarmass was tweeked to allow you to go over this by about 50. So for example if the player has already eaten 50 points worth of food and they need some precious HP from you food item, they won't be able to eat it if it's strength is over 100 and the item will be useless to them. HP, MP, and ST gained from food, drink, or pill is double the strength of the meal item. Refer to <a href="http://dead-souls.net/docs/build/Meals">http://dead-souls.net/docs/build/Meals</a> for more details.
+
+<h3>Meal Types</h3>
+<p>
+<i>SetMealType(int)</i><br /><br />
+Flags what type of meal it it. Becare as some of these values are mutally exclusive while others can safely be combined. For example, you cannot use MEAL_FOOD and MEAL_DRINK together (what would that even mean? A smoothy?) but you can combine MEAL_POISON with either of them to make the meal poisonous. MEAL_FOOD, MEAL_DRINK, and MEAL_PILL are mutually exclusive to one-another and should never be combine. Think of those three values as the base type for the meal. All other values are just modifiers. Food regenerates health and fills the player's food stat. Drinks regenerates stamina and fills the player's drink stat. Pill simply replenish skill power(aka magic points or in Stellarmass 'special points' since we don't use magic ;) Alcohol, poison, andcaffeine raise the respective stat on the player as well.
+</p><br />
+
+<h3>Strength</h3>
+<p>
+<i>SetStrength(int)</i><br /><br />
+The strength of the meal. For food, drinks, this value will collelate to how much the player's Food and Drink stats will rise. If the item is alcoholic this will also correlate to the player's alcohol level. Same goes for poison and caffeine levels. If the player is already near the maximum level for food or drink (alcohol and caffeine have no limits) then the player will not be able to consume this item if it's strength would push them above full (their belly would explode!). The HP, ST, and MP gained from food, drinks, and pills respectively is double the strength.
+</p><br />
+
+<h3>Empty Item</h3>
+<p>
+<i>SetEmptyItem(string)</i><br /><br />
+In the case of drinks there should be an 'empty' version of the container after it is consumed. This allows you to specify that item from your workspace. <b>Note: You only need to set this for drinks and you only set it if you are <i>not</i> setting the Name When Empty, Short Desc When Empty, and Long Desc When Empty values</b>.
+</p><br />
+
+<h3>Name When Empty(string)</h3>
+<p>
+<i>SetEmptyName(string)</i><br /><br />
+For drinks this is the name of the item after it has been consumed. If you did not set an Empty Item then you must set this for drinks.
+</p><br />
+
+<h3>Short Desc When Empty</h3>
+<p>
+<i>SetEmptyShort(string)</i><br /><br />
+For drinks this is the short description of the item after it has been cosumed. If you did not set an Empty Item then you must set this for drinks.
+</p><br />
+
+<h3>Long Desc When Empty</h3>
+<p>
+<i>SetEmptyLong(string)</i><br /><br />
+For drinks this is the long description of the item after it has been consumed. If you did not set an Empty Item then you must set this for drinks.
+</p><br />
+
+<h3>SetMealMessage</h3>
+<p>
+<i>SetMealMessage(mixed,mixed)</i><br /><br />
+The messages that are displayed when the player consumes the meal. The first one is displayed to the player, the second one is displayed to the rest of the room.
+</p><br />
+
+</BODY>
+</HTML>

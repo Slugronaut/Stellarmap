@@ -1,0 +1,70 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<HTML>
+<HEAD>
+<meta name="GENERATOR" content="Microsoft&reg; HTML Help Workshop 4.1">
+<Title>Properties</Title>
+</HEAD>
+<BODY>
+<h1>Room Editor: Properties Tab</h1>
+<img src="../img/roomeditor/properties.png" alt="properties tab" />
+<p>Various gameplay elements can be changed in this tab. It included features that affect what players can carry due to weight, what special actions they can or cannot perform, and how they can move about.
+</p>
+
+<h3>Gravity</h3>
+<p>
+<i>SetGravity(int)</i><br /><br />
+Affects the weight of the objects the player is carrying.
+</p><br />
+
+<h3>Town</h3>
+<p>
+<i>SetTown(string)</i><br /><br />
+Tags a room as belonging to a specific township. Used when allowing players to create their own homes within a region. Laregly unused in Stellarmass at this time. See <a href="http://dead-souls.net/docs/build/Towns">http://dead-souls.net/docs/build/Towns</a> for more details.
+</p><br />
+
+<h3>Obvious Exits</h3>
+<p>
+<i>SetObviousExits(string)</i><br /><br />
+Text that is displayed at the bottom of the room description for avilable exits. Useful for making certain exits 'hidden'. For example if a room has "avilable exits: north, east, south" by default, you could enter "north, south" and thus make' east' invisible.
+</p><br />
+
+<h3>Leave Tracks</h3>
+<p>
+<i>SetTracksAllowed(int)</i><br /><br />
+If checked, any living creature that passes through this room will leave tracks for a short time. Recommended to be left on so that Explorers can use their 'Track' skill.
+</p><br />
+
+<h3>Room Properties</h3>
+<p>
+<i>SetProperties(mapping) or SetProperty(string,mixed)</i><br /><br />
+Controls certain aspects of a room.
+<ul>
+	<li>no attack - Disallows players and NPCs from attacking anything</li>
+	<li>no steal - Disallows players and NPCs from stealing from anyone</li>
+	<li>no magic - Disables powers. Currently the 'powers' system is used by Stellarmass however, if it ever is, this option will disable class-specific skills.</li>
+	<li>no bump - Keeps players and NPCs from forcing others out of the room and into adjacent rooms</li>
+	<li>no paralyze - Keeps players and NPCs from becoming helplessly paralyzed, even by lack of stamina</li>
+	<li>no teleport - Disables teleporting into or from the room(and maybe</li>
+	<li>no clear - prevents an avatar from clearing a wilderness room in
+order to build a town.  Not relevant to rooms in towns.
+</li>
+	<li>login -  Flags this room as the place the player will return when they log out. Note, this is Stellarmass specific and slightly different from Standard Dead souls.</li>
+	<li>hospital - Same thing as login but also flags the room a player will return to if they die or if they use the <i>paramedic</i> command. You should always place a doctor in the room if you use this so that players can regenerate health and limbs.</li>
+	<li>mechs allowed - Allows players driving mechs to enter this room.</li>
+</ul>
+</p><br />
+
+<h3>Terrain Types</h3>
+<p>
+<i>SetTerrain(int)</i><br /><br />
+Sets the atmosphere, legal movement types, and stamina use required by players moving through a room. Some combinations are illegal (for example, underwater and road). Beware, some of these choices are leathal to exposed players; such as T_SPACE. Some are meant to be used as combinations with the room's Medium (such as T_SURFACE and MEDIUM_WATER).
+</p><br />
+
+<h3>Medium</h3>
+<p>
+<i> SetMedium(int)</i><br /><br />
+Another type of specification for atmoshpere and sometimes movement capacity. Note, MEDIUM_VACCUM is a costume value for stellarmass and represents a region with solid ground and no atmosphere as opposed to MEDIUM_SPACE which has neither ground nor atmsphere.
+</p><br />
+
+</BODY>
+</HTML>

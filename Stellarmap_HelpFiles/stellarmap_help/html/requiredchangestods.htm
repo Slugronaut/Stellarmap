@@ -1,0 +1,30 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<HTML>
+<HEAD>
+<meta name="GENERATOR" content="Microsoft&reg; HTML Help Workshop 4.1">
+<Title>Base_armor.c Change</Title>
+</HEAD>
+<BODY>
+<h1>Armor Modifications in Dead Souls</h1>
+<p>
+The following modification is required for armors generated with Stellarmap to work with Dead Souls. A funtion must be added in order for the generated armor to load properly and provide protections in game. In Dead Souls versions 2.9 (iirc) and later the modification must be made to the <i>base_armor.c</i> file. Versions earlier than that will need to modify the <i>armor.c</i> file instead. They both can be located in the directory <i>ds/lib/lib/std</i>. 
+<br />
+<br />
+The required modification is to append the following function at the end of the file. It simply allows a mapping of protections to be passed to the object so that individual calls to <i>SetProtection()</i> are not required.
+<br />
+<br />
+<code>
+void SetProtections(mapping protections)<br />
+&nbsp&nbsp{<br />
+&nbsp&nbspforeach(int type in keys(protections))<br />
+&nbsp&nbsp&nbsp&nbsp{<br />
+&nbsp&nbsp&nbsp&nbspSetProtection(type,protections[type]);<br />
+&nbsp&nbsp&nbsp&nbsp}<br />
+&nbsp&nbsp}<br />
+</code>
+<br />
+<br />
+</p>
+
+</BODY>
+</HTML>

@@ -1,0 +1,26 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<HTML>
+<HEAD>
+<meta name="GENERATOR" content="Microsoft&reg; HTML Help Workshop 4.1">
+<Title>Content</Title>
+</HEAD>
+<BODY>
+<h1>Room Editor: Content Tab</h1>
+<img src="../img/roomeditor/contenttab.png" alt = "content tab" />
+<p>
+The content tab controls what types of items and additional descriptions will be contained within the room. Usually this is for extra detail should the player want to further investigate a described element in the room's long description. For example, if a room were described with 'A fireplace is crackling in the corner.' The player may wish to <i>examine fire</i> or <i>listen to fireplace</i>, or even <i>serach fireplace</i>. Static items allow you to gracefully insert additional detail into your rooms that rewards observant players.
+</p>
+<h3>Inventory</h3>
+<p>
+<i>SetInventory(mapping)</i><br /><br />
+This is a list of all the objects contained within the room upon it's creation. The list is composed of any NPC, item, object, meal, weapon, or armor that was imported into the workspace. Every time the room is reset these items will be recreated if they are not already in the room. They may consits of NPCs, weapons, items, etc. The first element in the map identifies the file, the second value is based on context. If a number is passed, that many of the item will be spawned. Every time the room resets of that number of items is not currently in the room the required additional number will be spawned. If the number is negative then the items spawned will be unique and regardless of whether or not they are in the room, if they exist no more will be spawned until such a time as they are destroyed. If a string is passed, it is taken as an instruction for the object being spawned. So for example "wiled gun" would tell an NPC to wield a gun if they had one when they were spawned.
+</p><br />
+
+<h3>Static Items</h3>
+<p>
+<i>SetItems(mapping)</i><br /><br />
+Static items are a special type of object. They do not exist as stand alone interactive objects like the above inventory. Instead, they are simply place holders for semi-interactive objects attached to a room. They can be serached, examined, smelled, listened to, and even entered and exited from. Howevere, they cannot be picked up, worn, or carried because they do not physically exist. They are just placeholder names. The left box takes a string that identifies an item or an array escaped with $ that represents a collection of objects that should be treated as the same (ex: $({"fire", "fire place","fireplace"}) would over the bases of all possibilities if there were a fire place in a room that you wanted a player to interact with. The right box simply takes text that describes the object or objects in the left box when it is or they are examined.
+</p><br />
+
+</BODY>
+</HTML>

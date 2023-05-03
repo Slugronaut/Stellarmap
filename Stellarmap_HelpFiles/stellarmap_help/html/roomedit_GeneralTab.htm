@@ -1,0 +1,68 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<HTML>
+<HEAD>
+<meta name="GENERATOR" content="Microsoft&reg; HTML Help Workshop 4.1">
+<Title>General Tab</Title>
+</HEAD>
+<BODY>
+<h1>Room Editor: General Tab</h1>
+<img src="../img/roomeditor/generaltab.png" alt="general tab" />
+<p>
+This tab consists of several basic properties that should be set for all rooms. Most
+of these properties are presentational in manner and have little mechanical value in terms of gameplay.
+</p>
+
+
+<h3>Room Name</h3>
+<p>
+<i>SetShort(string)</i><br /><br />
+The title of the room that appears at the top of the description when the player enters. Can take a string or a value escaped with $.
+</p><br />
+
+<h3>Light</h3>
+<p>
+<i>SetLight(int) or SetProperty("light",int)</i><br /><br />
+Represents the brightness of a room. Default value is 30. For stellarmass
+anything below 20 is considered low-light and anything below 12 is near pitch black.
+As well, anything over 50 is over-bright.
+</p><br />
+
+<h3>Climate</h3>
+<p>
+<i>SetClimate(string)</i><br /><br />
+Sets the weather patterns for the room. Items are loaded from the configuration file.
+</p><br />
+
+<h3>Long Description</h3>
+<p>
+<i>SetLong(string)</i><br /><br />
+The detailed description of the room. Viewed when the player first enters the room (if player has long descriptions turn on) or when using the <i>look</i> command.
+</p><br />
+
+<h3>Enable Day/Night</h3>
+<p>
+<i>n/a</i><br /><br />
+This is just a switch to enable or disable the text boxes for Day and Night long descriptions. It does not generate any code for itself but instead allows <i>SetDayLong()</i> and <i>SetNightLong()</i> to be output to the file when saved.
+</p><br />
+
+<h3>Day Description</h3>
+<p>
+<i>SetDayLong(string)</i><br /><br />
+An alternate to <i>SetLong()</i> that is to be used in tandem with <i>SetNightLong()</i>. It sets the long description to be displayed during the daytime. Only works for rooms with a climate set to something other than <i>indoors</i>.
+</p><br />
+
+<h3>Night Description</h3>
+<p>
+<i>SetNightLong(string)</i><br /><br />
+An alternate to <i>SetLong()</i> that is to be used in tandem with <i>SetDayLong()</i>. It sets the long descriptio to be displayed during the night time. Only works for rooms with a climate set to something other than <i>indoors</i>.
+</p><br />
+
+<h3>Icon</h3>
+<p>
+<i>n/a</i><br /><br />
+Chooses the icon to display on the room in the map domain view. This does have any effect on the code generated for this room.
+</p><br />
+
+
+</BODY>
+</HTML>

@@ -1,0 +1,102 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<HTML>
+<HEAD>
+<meta name="GENERATOR" content="Microsoft&reg; HTML Help Workshop 4.1">
+<Title>Armor Generator</Title>
+</HEAD>
+<BODY>
+<h1>Armor Generator</h1>
+<p>
+This generator is used to create armors. Most common features are found in the first three tabs. The four tab, 'Inherited items' contains specialized functions for sub-types of armor. However, it also contains a single common element that allows the armor to be used as a lifesupport system in space.
+</p>
+<h3>Shared Features With Items</h3>
+<p>
+Many of the entries in the General and Properties tabs are the same as in the Item Generator. You can look up details about these common controls in the Item Generator help files. Only the features that are unique to armor are found here. Take note that armor and clothing are interchangeable term here as the only difference is a subjective metric of protective value.
+</p>
+
+<br />
+<h1>Armor Generator: Armor Stats Tab</h1>
+<br />
+<h3>Protections</h3>
+<p>
+<i>SetProtections(mapping)</i><br /><br />
+Represents the various kinds of damage that can be protected aginst with this armor. The left combo box allows you to select a pre-determined type of damage and the right box takes a numerical value. The value is the number of points for that type of damage that are reduced during combat attack adjustments. Note that because weapons can have multiple types of damage but have only a single damage value that if an armro does not match one of the damage values then part of it will 'leak through' and hit the target.
+</p><br />
+
+<h3>Armor Type</h3>
+<p>
+<i>SetArmorType(int)</i><br /><br />
+Sets what type of armor it is in and what body-part wears it. Damage reduction is only applied for the limb that is wearing the armor if that limbs gets hit. Keep in mind that in many cases no two pieces of armor can be work on the same spot. So be careful about armor set considerations. Some exceptions might be rings, which players can equip one on each finger and some special items that 'layer' over top of others. For example, A_BODY_ARMOR applies to the whole body and can cover everything else but you can only wear one type of A_BODY_ARMOR at a time.
+</p><br />
+
+<h3>Required Limbs</h3>
+<p>
+<i>SetRestrictLimbs(array)</i><br /><br />
+This is a list of limbs that a being must have in order to wear the armor. Useful in cases where armor is hightly specialized. For example, if a being must be humanoid you might require that they have two arms, two legs, a torso, neck, and head. Keep in mind this wouldn't be needed for cases where a leg-less being can't wear pants because if you've already defined the armor type as A_PANTS then they can't wear it without pants. This is more for required specific combinations of limbs. Use with caution as it might make many kinds of armor inaccessible to certain players and NPCs. Only set this if you have a very specific reason to do so.
+</p><br />
+
+<h3>Equip Message</h3>
+<p>
+<i>SetWear(string)</i><br /><br />
+A text message that is displayed to the player when they wear the armor. It can also be an escaped functional which could test for specific conditions to see if the player can wear the armor at all, among other things. If left blank, the default wear-message is displayed.
+</p><br />
+
+<h3>inherit LIB_SPACESUIT</h3>
+<p>
+<i>inherit LIB_SPACESUIT;</i><br /><br />
+Makes this armor a lifesupport system that allows players to survive in an airless or poisonous environment. The lifesupport system has a limited period of operation and needs to be recharged by the player from time-to-time. This feature will add an additional cost of 2000 when the cost is generated.
+</p><br />
+
+<br />
+<h1>Armor Generator: Worn Storage Inherited Features</h1>
+<br />
+<p>Worn storage acts just like armor except that it has the same abilities as a container object. It can be set to open and close, be locked or unlocked, and has a mx carrying capacity.
+</p>
+
+<h3>Max Weight</h3>
+<p>
+<i>SetMaxCarry(int)</i><br /><br />
+Sets the maximum ammount of weight in hundreths of pounds that can be stored in this armor.
+</p><br />
+
+<h3>Key Name</h3>
+<p>
+<i>SetKeyName(string)</i><br /><br />
+Sets the required id for a key to lock or unlock this armor's containment if it can be locked.
+</p><br />
+
+<h3>Lockable</h3>
+<p>
+<i>SetCanLock(int)</i><br /><br />
+If checked, this armor can be locked and unlocked with a key.
+</p><br />
+
+<h3>Locked</h3>
+<p>
+<i>SetLocked(int)</i><br /><br />
+Sets the default lock state of the armor when it is spawned.
+</p><br />
+
+<h3>Closeable</h3>
+<p>
+<i>SetCanClose(int)</i><br /><br />
+If checked, this armor can be opened and closed.
+</p><br />
+
+<h3>Closed</h3>
+<p>
+<i>SetClosed(int)</i><br /><br />
+Sets the default close/open state of the armor when it is spawned.
+</p><br />
+
+<br />
+<h1>Armor Generator: Zuraki Gloves Inherited Features</h1>
+<br />
+<p>This armor has no special properties that can be set, however it inherits from the
+zuraki glove base object and has a few intrinsic properties instead. It can only be worn by zurakis on one of their front paws and it allows them to wield objects in their paws as if they were hands, however, it costs them some of their naturally high agility to wear them.
+</p>
+<br />
+<br />
+
+</BODY>
+</HTML>

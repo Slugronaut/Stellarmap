@@ -1,0 +1,34 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<HTML>
+<HEAD>
+<meta name="GENERATOR" content="Microsoft&reg; HTML Help Workshop 4.1">
+<Title>Exits</Title>
+</HEAD>
+<BODY>
+<h1>Room Editor: Exits Tab</h1>
+<img src="../img/roomeditor/exitstab1.png" alt="exits tab" />
+<p>
+The exits tab allows you to set the exits and enters of you room as well as assign doors to those exits. The enters list is enterly comprised of items from the <i>static item</i> list on the <a href="roomedit_ContentTab.htm">content tab</a> of the room editor. The exits list contains everything the enterables list has plus several default values for common exits such as north, south, east, west, and so on.  Just like inventories on the content page,, the doors list is propgated from the imported door objects in the workspace. You cannot assign a door until after an exit has been established. Take note that exits created in the map view domain show up in the exist list here. As well, you can manually edit the list here and the changes will be reflected in the map view. When you add a door to an exit, the map view will display a little yellow box around the exit node.
+</p>
+
+
+<h3>Enterables</h3>
+<p>
+<i>SetEnters(mapping)</i><br /><br />
+A collection of static 'objects' that  the player can enter using the <i>enter</i> command. The left box contains all the elements created in the static items menu of the content tab. The right box is all of the rooms imported into the workspace.
+</p><br />
+
+<h3>Exits</h3>
+<p>
+<i>SetExits(mapping)</i><br /><br />
+The directions the player can exit. Consists of the static items from the content tab plus the default values north, south, east, west, northeast, northwest, souteast, southwest, up, down, and out.  Assigning an exit to another room does <b>not</b> assign any exit from that desination back to the current room. Exits are effectively one-way unless you set them as otherwise.
+</p><br />
+
+<h3>Doors</h3>
+<p>
+<i>SetDoors(mapping) <b>Notice! This is not a part of default Dead Souls and must be inserted into the mud lib. Read more <a href="requiredchangesintro.htm">here.</a></b></i><br /><br />
+The door attached to the exits or entrances of this room. Assigning a door to an exit does <b>not</b> cause that door to be assigned to any exit in the attached room.
+</p><br />
+
+</BODY>
+</HTML>

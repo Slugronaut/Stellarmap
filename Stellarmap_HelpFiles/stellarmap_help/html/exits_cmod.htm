@@ -1,0 +1,33 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<HTML>
+<HEAD>
+<meta name="GENERATOR" content="Microsoft&reg; HTML Help Workshop 4.1">
+<Title>Exits.c Change</Title>
+</HEAD>
+<BODY>
+<h1>Exit/Door Modifications in Dead Souls</h1>
+<p>
+The following modification is required for rooms with doors generated with Stellarmap to work with Dead Souls. A funtion must be added in order for any room that was assigned doors to load properly in game. The modification takes place in <i>exits.c</i> which can be found in <i>ds/lib/lib/</i>.
+<br />
+<br />
+The required modification is to append the following function at the end of the file. It simply allows a mapping of doors to be passed to the object so that individual calls to <i>SetDoor()</i> are not required.
+<br />
+<br />
+<code>
+mixed SetDoors(mapping doors)<br />
+&nbsp&nbsp{<br />
+&nbsp&nbspif(!doors)	return 0;<br />
+&nbsp&nbspforeach(string dir in keys(doors))<br />
+&nbsp&nbsp&nbsp&nbsp{<br />
+&nbsp&nbsp&nbsp&nbspSetDoor(dir,doors[dir]);<br />
+&nbsp&nbsp&nbsp&nbsp}<br />
+&nbsp&nbspreturn doors;<br />
+&nbsp&nbsp}<br />
+</code>
+<br />
+<br />
+</p>
+
+
+</BODY>
+</HTML>

@@ -1,0 +1,41 @@
+[OPTIONS]
+Compatibility=1.1 or later
+Compiled file=stellarmap_help.chm
+Contents file=Table of Contents.hhc
+Default Window=Main Window
+Default topic=html\welcome.htm
+Display compile progress=No
+Full-text search=Yes
+Language=0x409 English (United States)
+
+[WINDOWS]
+Main Window="Stellarmap Help","Table of Contents.hhc",,,,,,,,0x42120,,0x3006,[10,10,455,489],,,,,,,0
+
+
+[FILES]
+html\welcome.htm
+html\intro.htm
+html\domainmapview.htm
+html\nonstringdata.htm
+html\roomeditorpanel.htm
+html\gettingstarted.htm
+html\controlsintro.htm
+html\requiredchangestods.htm
+html\requiredchangesintro.htm
+html\exits_cmod.htm
+html\roomedit_ContentTab.htm
+html\roomedit_GeneralTab.htm
+html\roomedit_RoomDetailsTab.htm
+html\roomedit_ExitsTab.htm
+html\roomedit_Properties.htm
+html\itemgenerator_General.htm
+html\itemgenerator_intro.htm
+html\itemgenerator_Properties.htm
+html\itemgenerator_WeaponStats.htm
+html\itemgenerator_Firearms.htm
+html\itemgenerator_Ammo.htm
+html\itemgenerator_Meals.htm
+html\armorgenerator_intro.htm
+
+[INFOTYPES]
+

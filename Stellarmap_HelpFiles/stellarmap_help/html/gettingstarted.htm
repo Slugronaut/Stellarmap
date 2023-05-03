@@ -1,0 +1,23 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<HTML>
+<HEAD>
+<meta name="GENERATOR" content="Microsoft&reg; HTML Help Workshop 4.1">
+<Title>Getting Started</Title>
+</HEAD>
+<BODY>
+<h1>Getting Started</h1>
+<h3>Creating a Domain Project Workspace</h3>
+Once you have started Stellarmap the first order of business is usually to start a new project. Each project workspace represents a particular domain in a Dead Souls MUD. It will store all of the subdirectories and files that represent rooms, items, and npcs. In order for the workspace and the MUD to work together a specialized header file is also generated that is included in all of the objects' code so that they can properly reference the subdirectories within the domain. As well, a master .xml file is generated that tracks all objects created so that your domain can later be imported back into Stellarmap for additional editing. Even better, the master .xml file can be shared with others to allow them to import file names from your domain into their workspace and thus allow everyone to develope using each other's objects without actually need the files or stepping all over each others toes.
+<br />
+<br />
+To begin a new project select File->New from the drop down menu. A directory browser will appear. You can select the output folder for your entire domain here. When you are ready to import your project into Dead Souls this entire folder will be copied into the 'Domains' folder of the server.
+<br />
+<br />
+<h3>Saving Domain Projects</h3>
+As of yet no changes will take place within that folder. When you select File->Save all domain subdirectories will be created and verified and all files imported into the workspace will be exported into the appropriate folders as LPC code.
+<br />
+<br />
+<h3>Loading Domain Projects</h3>
+When you are ready to further edit an old project simply choose File->Open from the drop down menu. When the directory browser shows up simply select the folder that contains the domain files and press Ok. If the master file is found within the project will begin loading and your can resume where you left off. If any files cannot be found or do not import properly you will be notified.
+</BODY>
+</HTML>

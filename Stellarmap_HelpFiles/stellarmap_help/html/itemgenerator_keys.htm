@@ -1,0 +1,46 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<HTML>
+<HEAD>
+<meta name="GENERATOR" content="Microsoft&reg; HTML Help Workshop 4.1">
+<Title>Item Generator: Keypads, Keycards, and Cardswipes</Title>
+</HEAD>
+<BODY>
+<h1>Item Generator: Keypads, Keycards, and Cardswipes</h1>
+<p>These three items are interrelated objects that attach to other objects or doors and control their lock state. Because keypads and cardswipes are derived from LIB_HACKABLE it is possible for players with the 'Hack' skill to activate these objects without the need for a password or key.</p>
+
+<h2>Keypads</h2>
+<p>A special sentinel that controls the lock status of a door or object. It allows players to either hack it to active the lock switch or use the 'type' command to type in a string of characters as a password.</p>
+
+<h3>Required Password</h3>
+<p>
+<i>SetPassword(string)</i><br /><br />
+The password needed to activate this object and either lock or unlock whatever it is controlling.
+</p><br />
+
+<h3>Object Name</h3>
+<p>
+<i>SetObjectName(string)</i><br /><br />
+This is a complex and somewhat concoluted bit of data. It can take one of three things. The first is an exit direction-  north, south, down, etc, that has a door attached to it. This will then attach the door object to the keypad and control its locked state. A second option is a fully-fledged filename or instance filename (a filename with the hash symbol and instance number after it). This allows the keypad to control a remote object. Finally, as a third option, you can pass the name of an object present in the room.
+</p><br />
+
+<h3>Hack Difficulty</h3>
+<p>
+<i>SetHackDC(int)</i><br /><br />
+A value between 1 and 100 that determines how hard it is to hack this device. Higher numbers mean it is harder.
+</p><br />
+
+<h2>Cardswipes</h2>
+<p>A special sentinel that controls the lock status of a door or object. It allows players to either hack it to active the lock switch or use the 'swipe' command to swipe a keycard object that contains the password needed.</p>
+<p>All of the cardswipe function calls are the same as the keypad. Read the keypad reference entry above for details.</p>
+
+<h2>Keycards</h3>
+<p>Keycards are little more than slightly specialized items. The only major different is that they inherit the LIB_KEYCARD object and they contain a passcode that activates a cardswipe with a matching password.</p>
+
+<h3>Stored Password</h3>
+<p>
+<i>SetCode(string)</i><br /><br />
+The password entered here must match the required password for a cardswipe that is to be locked or unlocked by this keycard.
+</p><br />
+
+</BODY>
+</HTML>

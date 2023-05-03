@@ -1,0 +1,110 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<HTML>
+<HEAD>
+<meta name="GENERATOR" content="Microsoft&reg; HTML Help Workshop 4.1">
+<Title>Item Properties</Title>
+</HEAD>
+<BODY>
+<h1>Item Generator: Properties</h1>
+<p>Assorted properties that range from physical to economic.</p>
+
+<h3>Mass</h3>
+<p>
+<i>SetMass(int)</i><br /><br />
+Weight of the object in hundreths of a pound. So for example a value of 1 would be equal to 1/100 of a pound and a value of 1000 would be 10 pounds. A value of 1567 would be 15.67 pounds.
+</p><br />
+
+<h3>Value</h3>
+<p>
+<i>SetBaseCost(int)</i><br /><br />
+Represents a monetarily agnostic value. The 'calculate cost' button can be used to give a rough estimate for an item's value based on several factors including, armor properties, damage ability, weight, and durability (value half-life). Further tweeking can be done at the creator's discresion.
+</p><br />
+
+<h3>Destroy on Sell</h3>
+<p>
+<i>SetDestroyOnSell(int)</i><br /><br />
+Pretty self explanitory, no? When set, if this item is sold to a shop it is not put up in the shop keepers inventory but instead it is destroyed. This is usually a good setting to have to ensure certain rare items can't simply be bought by a newbie passing by at the right time. It also helps the mud by freeing up the memory that was being consumed by the obejct.
+</p><br />
+
+<h3>Disable Getting</h3>
+<p>
+<i>SetPreventGet(mixed)</i><br /><br />
+If left blank, this does nothing. If text is entered, it stops a player from simply picking up the object and walking off with it. Useful for interactive objects that need to stay put, like lockers for example. The text entered will be displayed when the user tries to get the object.
+</p><br />
+
+<h3>Disable Putting</h3>
+<p>
+<i>SetPreventPut(mixed)</i><br /><br />
+If left blank, this does nothing. If text is entered, it stops  a player from putting this object inside of other objects. Useful in cases where it doesn't make sense that an object can be put inside most other things due its size or shape. It also disables other objects from being put inside of it in the event that it can have inventory (see 'Is Container' below). The text entered will be displayed when the user tries to put the object somewhere.
+
+</p><br />
+
+<h3>Disable Dropping</h3>
+<p>
+<i>SetPreventDrop(mixed)</i><br /><br />
+If left blank, this does nothing. If text is entered, it stops  the item from being dropped on the ground by a player using the 'drop' command. Used rarely but might have utility with some quest items. The text entered will be displayed when the user tries to drop the object.
+
+</p><br />
+
+<h3>Inventory</h3>
+<p>
+<i>SetInventory(mapping)</i><br /><br />
+Allows you to assign objects from the workspace to the container's default inventory. The box on the right box allows you to specify the number of that particular item.
+</p><br />
+
+<h3>Is Container</h3>
+<p>
+<i>inherit LIB_STORAGE;</i><br /><br />
+Makes the object inherit properties from the storage item rather than the normal item object. This also enables several controls related to storage objects.
+</p><br />
+
+<h3>Max Weight</h3>
+<p>
+<i> SetMaxCarry(int)</i><br /><br />
+The maximum combined  weight of all items in hundreths of pounds that this object can contain.
+</p><br />
+
+<h3>Opacity</h3>
+<p>
+<i>maps to SetOpacity(int)</i><br /><br />
+Determines that ability of a player to see into the container when examining it. It also determines how much light can escape from the container and fill the surrounding room. 0 is fully transparent and 100 it fully opaic.
+</p><br />
+
+<h3>Closeable</h3>
+<p>
+<i>maps to SetCanClose(int)</i><br /><br />
+Determines if the container can be closed using the 'close' command or if it is always open.
+</p><br />
+
+<h3>Closed</h3>
+<p>
+<i>maps to SetClosed(int)</i><br /><br />
+Sets the default state of the object as closed or open.
+</p><br />
+
+<h3>Lockable</h3>
+<p>
+<i>maps to SetCanLock(int)</i><br /><br />
+Determines if the container can be locked using the 'lock with' command.
+</p><br />
+
+<h3>Locked</h3>
+<p>
+<i>maps to SetLocked(int)</i><br /><br />
+Sets the default state of the object as either locked or unlocked.
+</p><br />
+
+<h3>Key Unlock Id</h3>
+<p>
+<i>maps to SetKey(string)</i><br /><br />
+The id of the key that can unlock this container.
+</p><br />
+
+<h3>Vendor Types</h3>
+<p>
+<i>maps to SetVendorType(int)</i><br /><br />
+Flags what types of shop keepers will buy this item.
+</p><br />
+
+</BODY>
+</HTML>

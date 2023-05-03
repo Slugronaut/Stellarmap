@@ -1,0 +1,31 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<HTML>
+<HEAD>
+<meta name="GENERATOR" content="Microsoft&reg; HTML Help Workshop 4.1">
+<Title>Using Non String Data</Title>
+</HEAD>
+<BODY>
+<h1>Non String Data in Function Controls</h1>
+<p>
+Function controls are the controls used in Stellarmap to represent a function call for the object being created. Most of the time they will only accept a certain kind of input (such as only number, or only selections form a list). However, other controls can often take multiple kinds of input. For example, the function SetLong() can receive a string literal, a string variable, or even a functional (a pointer to another function definition). The trouble stirs with the fact that, by default, the control representing it always inserts quotes around its input thus making it a string literal.
+<br />
+<br />
+An escape sequence of $ can be placed in front of any such text and the control will leave the data alone when exporting. Thus allowing the creator to specify variable names and other functions as well as plain quoted text.
+<br />
+<br />
+So for example, if  you wanted to make the long description for a room a functional you would type<br /><I>$(: LongDescFunc :)</I>.<br /><br />Without the escaping $ it would just be encoded as<br /><code>SetLong("(:LongDescFunc:)");</code>
+<br />
+<br />
+<br />
+Here is an example of how the escape character looks in action. In this control, used to create a mapping that is passed to a function, the second pair passed has a variable name rather than a string literal.
+<br />
+<img src="../img/nonstring1.PNG" alt="" />
+<img src="../img/nonstring2.PNG" alt="" />
+<br />
+<br />
+<br />
+ALERT: Currently there is no escape sequence for $ and you cannot start a control's input with that symbol. In the future it will be escaped by itself so a string literal starting meant to be <I>"$Hello World" </I>will be typed in as <I>$$Hello World</I>. As well, there is currently no escape for quotes symbols at the beginning of text and so any found by the parser will be stripped. This will be escaped in the future by using double quote marks like so:<I> ""Joe" was his name.</I>
+</p>
+
+</BODY>
+</HTML>

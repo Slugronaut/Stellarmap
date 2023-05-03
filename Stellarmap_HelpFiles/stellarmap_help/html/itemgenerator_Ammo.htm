@@ -1,0 +1,42 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<HTML>
+<HEAD>
+<meta name="GENERATOR" content="Microsoft&reg; HTML Help Workshop 4.1">
+<Title>Item Generator: Ammo Tab</Title>
+</HEAD>
+<BODY>
+<h1>Item Generator: Ammo Inherited Features</h1>
+<p>Here you will find the properties of an item that represents ammo to be used with firearms. The most important property is the Ammo Type which identifies what types of weapons it can be used in. Everything else is optional.
+
+<h3>Ammo Type</h3>
+<p>
+<i>SetAmmoClass(string)</i><br /><br />
+A string of text that identifies what types of weapons can load this ammo. The Ammo Type of the firearms meant to load it should be the same value.
+</p><br />
+
+<h3>Max Ammo</h3>
+<p>
+<i> SetMaxAmmo(int)</i><br /><br />
+For magazine based ammo, this number will be how many round are stored inside of it. <b>Note:</b> If this is meant to be a single round, for example, a shot gun shell or an arrow, then this value must stay at 1. The firearm itself will keep track of the ammo count in such cases and certain assumptions are made about single-shot ammo. Also take note that any round that has a max ammo count of 1 will be treated as a round regardless of the type of weapon it is in.
+</p><br />
+
+<h3>Ammo Damage Type</h3>
+<p>
+<i>SetDamageTypeBonus(int)</i><br /><br />
+This is a bonus damage type that the ammo adds to the default damage type already done by the weapon.
+</p><br />
+
+<h3>Damage Bonus</h3>
+<p>
+<i>SetClassBonus(int)</i><br /><br />
+Bonus damage dealt by the ammo that is added to the firearm's max damage before adjustsments of stats, skills, randomness, etc.
+</p><br />
+
+<h3>Accuracy Bonus</h3>
+<p>
+<i>SetAccuracyBonus(int)</i><br /><br />
+Additional accuracy applied to the weapon when firing this type of ammo. Note that the final resulting accuracy will never be over 100%.
+</p><br />
+
+</BODY>
+</HTML>

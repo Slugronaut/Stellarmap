@@ -1,0 +1,622 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A334BDC0-CA94-4AA4-91FA-31B90E1B00A7}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Stellarmap</RootNamespace>
+    <AssemblyName>Stellarmap</AssemblyName>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <ApplicationIcon>Resources\Icon2.ico</ApplicationIcon>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <TargetFrameworkProfile />
+    <PublishUrl>C:\Users\James\Desktop\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>4</ApplicationRevision>
+    <ApplicationVersion>0.1.1.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;STELLARMASS</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE;STELLARMASS</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'DSRelease|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\DSRelease\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;MONOCOMPAT</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>B20371B8E32B1783EC92228DD4CD3F3F1BD0A6D8</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>Stellarmap_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Accessibility" />
+    <Reference Include="NHunspell, Version=0.9.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\external\nhunspell\NHunspell.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="src\app\controller\DomainController.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\app\controller\ItemViewManager.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\app\globals\Delegates.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\app\globals\Error.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\app\globals\EventArgs.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\app\globals\GlobalConstants.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\app\globals\Metrics.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\app\globals\Utility.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\app\model\DecomposedCode.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\app\model\DomainModel.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\app\model\FileReferenceModel.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\app\model\FunctionCallsCollection.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\app\model\Globals.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\app\model\IncludeFile.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\app\model\ItemModel.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\app\model\ItemsConfig.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\app\model\RoomEditorState.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\app\model\RoomModel.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\app\model\RoomUpdateInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\app\view\ConnectionLine.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\app\view\ConnectionNode.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\app\view\ControlRenderDevice.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\app\view\controls\Check.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="src\app\view\controls\Check.Designer.cs">
+      <DependentUpon>Check.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\app\view\controls\CheckList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="src\app\view\controls\CheckList.Designer.cs">
+      <DependentUpon>CheckList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\app\view\controls\ComboListBuilder.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="src\app\view\controls\ComboListBuilder.Designer.cs">
+      <DependentUpon>ComboListBuilder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\app\view\controls\ComboMapBuilder.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="src\app\view\controls\ComboMapBuilder.Designer.cs">
+      <DependentUpon>ComboMapBuilder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\app\view\controls\ComboSelection.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="src\app\view\controls\ComboSelection.Designer.cs">
+      <DependentUpon>ComboSelection.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\app\view\controls\ComboSelectionTypeable.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="src\app\view\controls\ComboSelectionTypeable.Designer.cs">
+      <DependentUpon>ComboSelectionTypeable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\app\view\controls\Radio.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="src\app\view\controls\Radio.Designer.cs">
+      <DependentUpon>Radio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\app\view\controls\RadioList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="src\app\view\controls\RadioList.Designer.cs">
+      <DependentUpon>RadioList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\app\view\controls\DoubleComboMap.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="src\app\view\controls\DoubleComboMap.Designer.cs">
+      <DependentUpon>DoubleComboMap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\app\view\controls\FlexiFunction.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="src\app\view\controls\FlexiFunction.Designer.cs">
+      <DependentUpon>FlexiFunction.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\app\view\controls\FlickerFreeRichTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="src\app\view\controls\ListBuilder.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="src\app\view\controls\ListBuilder.Designer.cs">
+      <DependentUpon>ListBuilder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\app\view\controls\MapBuilder.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="src\app\view\controls\MapBuilder.Designer.cs">
+      <DependentUpon>MapBuilder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\app\view\controls\MultiCall.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="src\app\view\controls\MultiCall.Designer.cs">
+      <DependentUpon>MultiCall.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\app\view\controls\NumberEntry.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="src\app\view\controls\NumberEntry.Designer.cs">
+      <DependentUpon>NumberEntry.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\app\view\controls\RadioListBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="src\app\view\controls\RenderTarget.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="src\app\view\controls\RenderTarget.designer.cs">
+      <DependentUpon>RenderTarget.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\app\view\controls\RightComboMapBuilder.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="src\app\view\controls\RightComboMapBuilder.Designer.cs">
+      <DependentUpon>RightComboMapBuilder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\app\view\controls\TextDump.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="src\app\view\controls\TextDump.Designer.cs">
+      <DependentUpon>TextDump.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\app\view\controls\TextEntry.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="src\app\view\controls\TextEntry.Designer.cs">
+      <DependentUpon>TextEntry.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\app\view\forms\About.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\app\view\forms\About.Designer.cs">
+      <DependentUpon>About.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\app\view\forms\BasicTextEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\app\view\forms\BasicTextEditor.Designer.cs">
+      <DependentUpon>BasicTextEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\app\view\forms\CreateNewRoomForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\app\view\forms\CreateNewRoomForm.Designer.cs">
+      <DependentUpon>CreateNewRoomForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\app\view\forms\DomainOptionsWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\app\view\forms\DomainOptionsWindow.Designer.cs">
+      <DependentUpon>DomainOptionsWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\app\view\forms\DomainViewForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\app\view\forms\DomainViewForm.Designer.cs">
+      <DependentUpon>DomainViewForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\app\view\forms\ExportItemForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\app\view\forms\ExportItemForm.Designer.cs">
+      <DependentUpon>ExportItemForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\app\view\forms\ImportExternalDomainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\app\view\forms\ImportExternalDomainForm.Designer.cs">
+      <DependentUpon>ImportExternalDomainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\app\view\forms\ProgressModal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\app\view\forms\ProgressModal.Designer.cs">
+      <DependentUpon>ProgressModal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\app\view\generators\CreateArmorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\app\view\generators\CreateArmorForm.Designer.cs">
+      <DependentUpon>CreateArmorForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\app\view\generators\CreateDoor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\app\view\generators\CreateDoor.Designer.cs">
+      <DependentUpon>CreateDoor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\app\view\generators\CreateItemForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\app\view\generators\CreateItemForm.Designer.cs">
+      <DependentUpon>CreateItemForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\app\view\generators\CreateNpcForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\app\view\generators\CreateNpcForm.Designer.cs">
+      <DependentUpon>CreateNpcForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\app\view\GUIMouseStateMachine.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\app\view\ImageBox.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\app\view\View.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\app\view\VirtualDomain.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\App.cs" />
+    <Compile Include="src\components\AFunctionControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="src\components\IRenderTarget.cs" />
+    <Compile Include="src\components\IViewPort.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="src\tools\Positioner.cs" />
+    <Compile Include="src\tools\AssetManager.cs" />
+    <Compile Include="src\components\IDomainModelAdapter.cs" />
+    <Compile Include="src\components\IDomainModel.cs" />
+    <Compile Include="src\components\IDomainViewAdapter.cs" />
+    <Compile Include="src\components\IDomainView.cs" />
+    <Compile Include="src\components\IFunctionControl.cs" />
+    <Compile Include="src\tools\ParserTools.cs" />
+    <Compile Include="src\tools\TypingSpellChecker.cs" />
+    <Compile Include="src\tools\XmlParser.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <EmbeddedResource Include="assets\code\shop.c" />
+    <EmbeddedResource Include="assets\code\instance.c" />
+    <EmbeddedResource Include="assets\code\policeoffice.c" />
+    <EmbeddedResource Include="assets\code\jailcell.c" />
+    <None Include="assets\stellarmap_help.chm" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="Stellarmap_TemporaryKey.pfx" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="src\app\view\controls\Check.resx">
+      <DependentUpon>Check.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\app\view\controls\CheckList.resx">
+      <DependentUpon>CheckList.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\app\view\controls\ComboListBuilder.resx">
+      <DependentUpon>ComboListBuilder.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\app\view\controls\ComboMapBuilder.resx">
+      <DependentUpon>ComboMapBuilder.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\app\view\controls\ComboSelection.resx">
+      <DependentUpon>ComboSelection.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\app\view\controls\ComboSelectionTypeable.resx">
+      <DependentUpon>ComboSelectionTypeable.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\app\view\controls\Radio.resx">
+      <DependentUpon>Radio.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\app\view\controls\RadioList.resx">
+      <DependentUpon>RadioList.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\app\view\controls\DoubleComboMap.resx">
+      <DependentUpon>DoubleComboMap.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\app\view\controls\FlexiFunction.resx">
+      <DependentUpon>FlexiFunction.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\app\view\controls\ListBuilder.resx">
+      <DependentUpon>ListBuilder.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\app\view\controls\MapBuilder.resx">
+      <DependentUpon>MapBuilder.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\app\view\controls\MultiCall.resx">
+      <DependentUpon>MultiCall.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\app\view\controls\NumberEntry.resx">
+      <DependentUpon>NumberEntry.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\app\view\controls\RenderTarget.resx">
+      <DependentUpon>RenderTarget.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\app\view\controls\RightComboMapBuilder.resx">
+      <DependentUpon>RightComboMapBuilder.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\app\view\controls\TextDump.resx">
+      <DependentUpon>TextDump.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\app\view\controls\TextEntry.resx">
+      <DependentUpon>TextEntry.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\app\view\forms\About.resx">
+      <DependentUpon>About.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\app\view\forms\BasicTextEditor.resx">
+      <DependentUpon>BasicTextEditor.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\app\view\forms\CreateNewRoomForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>CreateNewRoomForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\app\view\forms\DomainOptionsWindow.resx">
+      <DependentUpon>DomainOptionsWindow.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\app\view\forms\DomainViewForm.resx">
+      <DependentUpon>DomainViewForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\app\view\forms\ExportItemForm.resx">
+      <DependentUpon>ExportItemForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\app\view\forms\ImportExternalDomainForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ImportExternalDomainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\app\view\forms\ProgressModal.resx">
+      <DependentUpon>ProgressModal.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\app\view\generators\CreateArmorForm.resx">
+      <DependentUpon>CreateArmorForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\app\view\generators\CreateDoor.resx">
+      <DependentUpon>CreateDoor.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\app\view\generators\CreateItemForm.resx">
+      <DependentUpon>CreateItemForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\app\view\generators\CreateNpcForm.resx">
+      <DependentUpon>CreateNpcForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="assets\bitmaps\armor.bmp" />
+    <EmbeddedResource Include="assets\bitmaps\bank.bmp" />
+    <EmbeddedResource Include="assets\bitmaps\bar.bmp" />
+    <EmbeddedResource Include="assets\bitmaps\clothingstore.bmp" />
+    <EmbeddedResource Include="assets\code\armor.c" />
+    <EmbeddedResource Include="assets\code\item.c" />
+    <EmbeddedResource Include="assets\bitmaps\deathtrap.bmp" />
+    <EmbeddedResource Include="assets\bitmaps\default.bmp" />
+    <EmbeddedResource Include="assets\bitmaps\entranceexit.bmp" />
+    <EmbeddedResource Include="assets\bitmaps\finalboss.bmp" />
+    <EmbeddedResource Include="assets\bitmaps\food.bmp" />
+    <EmbeddedResource Include="assets\bitmaps\generalstore.bmp" />
+    <EmbeddedResource Include="assets\bitmaps\hiddenroom.bmp" />
+    <EmbeddedResource Include="assets\bitmaps\hospital.bmp" />
+    <EmbeddedResource Include="assets\bitmaps\interest.bmp" />
+    <EmbeddedResource Include="assets\bitmaps\lawmanoffice.bmp" />
+    <EmbeddedResource Include="assets\bitmaps\lounge.bmp" />
+    <EmbeddedResource Include="assets\bitmaps\node_8_un.bmp" />
+    <EmbeddedResource Include="assets\bitmaps\pawnshop.bmp" />
+    <EmbeddedResource Include="assets\bitmaps\petshop.bmp" />
+    <EmbeddedResource Include="assets\bitmaps\repairshop.bmp" />
+    <EmbeddedResource Include="assets\bitmaps\stargate.bmp" />
+    <EmbeddedResource Include="assets\bitmaps\updown.bmp" />
+    <EmbeddedResource Include="assets\bitmaps\vehicles.bmp" />
+    <EmbeddedResource Include="assets\bitmaps\weapons.bmp" />
+    <EmbeddedResource Include="assets\code\barkeep.c" />
+    <EmbeddedResource Include="assets\code\death.c" />
+    <EmbeddedResource Include="assets\code\freezer.c" />
+    <EmbeddedResource Include="assets\code\furnace.c" />
+    <EmbeddedResource Include="assets\code\npc.c" />
+    <EmbeddedResource Include="assets\code\pod.c" />
+    <EmbeddedResource Include="assets\code\start.c" />
+    <EmbeddedResource Include="assets\code\trainer.c" />
+    <EmbeddedResource Include="assets\code\vendor.c" />
+    <EmbeddedResource Include="assets\code\void.c" />
+    <EmbeddedResource Include="assets\code\wiz_hall.c" />
+    <EmbeddedResource Include="assets\smver_config\inheriteditems.xml" />
+    <EmbeddedResource Include="assets\code\storage.c" />
+    <EmbeddedResource Include="assets\code\door.c">
+    </EmbeddedResource>
+    <EmbeddedResource Include="assets\smver_config\inheritedarmors.xml" />
+    <None Include="assets\bitmaps\galaxy8.png" />
+    <EmbeddedResource Include="assets\spellcheck\en_US.aff" />
+    <EmbeddedResource Include="assets\spellcheck\en_US.dic" />
+    <EmbeddedResource Include="assets\smver_config\inheritednpcs.xml" />
+    <EmbeddedResource Include="assets\smver_config\config.xml" />
+    <EmbeddedResource Include="assets\dsver_config\config.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Content Include="assets\bitmaps\galaxy9.bmp" />
+    <Content Include="assets\bitmaps\galaxy9_bg.bmp" />
+    <EmbeddedResource Include="assets\bitmaps\galaxy9_bg.png" />
+    <EmbeddedResource Include="assets\dsver_config\inheritedarmors.xml" />
+    <EmbeddedResource Include="assets\dsver_config\inheriteditems.xml" />
+    <EmbeddedResource Include="assets\dsver_config\inheritednpcs.xml" />
+    <EmbeddedResource Include="assets\spellcheck\README_en_US.txt" />
+    <Content Include="assets\web\index.htm" />
+    <Content Include="assets\web\manual.css" />
+    <Content Include="assets\web\space_03.jpg" />
+    <Content Include="build actions.txt" />
+    <Content Include="Resources\Icon2.ico" />
+    <Content Include="updates.txt" />
+    <Content Include="TODO text\domain TODO.txt" />
+    <Content Include="TODO text\FIX NOW.txt" />
+    <Content Include="assets\web\updatenotes.htm">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\LPCParser\LPCParser.csproj">
+      <Project>{C6FE401F-05E3-4C56-B4A4-A2CDFC85646E}</Project>
+      <Name>LPCParser</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <PropertyGroup>
+    <PreBuildEvent>xcopy "$(ProjectDir)assets" "$(ProjectDir)$(OutDir)assets" /v /e /d  /y</PreBuildEvent>
+  </PropertyGroup>
+</Project>

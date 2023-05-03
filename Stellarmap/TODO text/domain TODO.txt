@@ -1,0 +1,34 @@
+
+
+Domain TODO:
+
+-Editable room names (needs to update Imagebox and model)
+-Editing roomnames needs to update the exits and enters list as well as the function controls
+-there are a Finite ammount of room names with no ability to recover unused previous names.
+-::create() in rooms is occasionally getting parameters passed to it somehow
+
+
+-Autoscroll when dragging a room near the edge of the viewport
+-handle lost focus for the statemachine to return to default state
+-Tooltips display roomnames in the domain viewport
+
+
+-LPC objects:
+	-restaurant, inventory, needs access to the list of imported (and working) items, NPCs and mobs.
+	
+
+-Code Parser
+
+
+
+MAJOR BUGS:
+
+-Can't keep selectionrect while drag scrolling
+	!needs a state transition from Selected to Scrolling
+
+
+MINOR BUGS:
+
+-When multiple rooms are selected the context menu for deleteing a room does nothing.
+
+

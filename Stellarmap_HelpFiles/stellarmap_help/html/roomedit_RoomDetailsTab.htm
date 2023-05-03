@@ -1,0 +1,38 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<HTML>
+<HEAD>
+<meta name="GENERATOR" content="Microsoft&reg; HTML Help Workshop 4.1">
+<Title>Room Details</Title>
+</HEAD>
+<BODY>
+<h1>Room Editor: Room Details Tab</h1>
+<img src="../img/roomeditor/roomdetailstab1.png" alt="room details tab" />
+<p>These are extra details that can be added to the room. Usually this is where static items are given the additional descriptions for searching, listening to, smelling, and reading. The term 'default' is defined for each as a case that happens when a player issues a command without speciying what. For ecample if player types <i>search</i> but not <i>search desk</i> then you can issue a message for a default search of the room or something similar.
+</p>
+
+<h3>Searchables</h3>
+<p>
+<i>SetSearches(mapping)</i><br /><br />
+The result of the player issuing the <i>search</i>command. The right box should either contain text for the result to display or an $-escaped function/functional that performs additional processing.
+</p><br />
+
+<h3>Readables</h3>
+<p>
+<i>SetReads(mapping)</i><br /><br />
+The result of the player issuing the <i>read</i>command. The right box should either contain text for the result to display or an $-escaped function/functional that performs additional processing.
+</p><br />
+
+<h3>Smells</h3>
+<p>
+<i>SetSmells(mapping)</i><br /><br />
+The result of the player issuing the <i>smell</i>command. The right box should either contain text for the result to display or an $-escaped function/functional that performs additional processing.
+</p><br />
+
+<h3>Sounds</h3>
+<p>
+<i>SetListens(mapping)</i><br /><br />
+The result of the player issuing the <i>listen</i>command. The right box should either contain text for the result to display or an $-escaped function/functional that performs additional processing.
+</p><br />
+
+</BODY>
+</HTML>
