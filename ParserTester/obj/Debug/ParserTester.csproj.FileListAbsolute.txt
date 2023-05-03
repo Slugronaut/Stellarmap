@@ -1,0 +1,15 @@
+C:\Users\James\Desktop\Stellarmass Project\Stellarmap\ParserTester\bin\Debug\ParserTester.exe
+C:\Users\James\Desktop\Stellarmass Project\Stellarmap\ParserTester\bin\Debug\ParserTester.pdb
+C:\Users\James\Desktop\Stellarmass Project\Stellarmap\ParserTester\bin\Debug\LPCParser.dll
+C:\Users\James\Desktop\Stellarmass Project\Stellarmap\ParserTester\bin\Debug\LPCParser.pdb
+C:\Users\James\Desktop\Stellarmass Project\Stellarmap\ParserTester\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\James\Desktop\Stellarmass Project\Stellarmap\ParserTester\obj\Debug\ParserTester.exe
+C:\Users\James\Desktop\Stellarmass Project\Stellarmap\ParserTester\obj\Debug\ParserTester.pdb
+C:\Users\James\Documents\Projects\Stellarmass Project\Stellarmap\ParserTester\bin\Debug\ParserTester.exe
+C:\Users\James\Documents\Projects\Stellarmass Project\Stellarmap\ParserTester\bin\Debug\ParserTester.pdb
+C:\Users\James\Documents\Projects\Stellarmass Project\Stellarmap\ParserTester\bin\Debug\LPCParser.dll
+C:\Users\James\Documents\Projects\Stellarmass Project\Stellarmap\ParserTester\bin\Debug\LPCParser.pdb
+C:\Users\James\Documents\Projects\Stellarmass Project\Stellarmap\ParserTester\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\James\Documents\Projects\Stellarmass Project\Stellarmap\ParserTester\obj\Debug\ParserTester.exe
+C:\Users\James\Documents\Projects\Stellarmass Project\Stellarmap\ParserTester\obj\Debug\ParserTester.pdb
+C:\Users\James\Documents\Projects\Stellarmass Project\Stellarmap\ParserTester\bin\Debug\ParserTester.exe.config

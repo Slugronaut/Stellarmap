@@ -1,0 +1,16 @@
+C:\Users\James\Documents\Projects\Stellarmass Project\Stellarmap\ParserTester\bin\DSRelease\ParserTester.exe
+C:\Users\James\Documents\Projects\Stellarmass Project\Stellarmap\ParserTester\bin\DSRelease\ParserTester.pdb
+C:\Users\James\Documents\Projects\Stellarmass Project\Stellarmap\ParserTester\bin\DSRelease\LPCParser.dll
+C:\Users\James\Documents\Projects\Stellarmass Project\Stellarmap\ParserTester\bin\DSRelease\LPCParser.pdb
+C:\Users\James\Documents\Projects\Stellarmass Project\Stellarmap\ParserTester\obj\DSRelease\ResolveAssemblyReference.cache
+C:\Users\James\Documents\Projects\Stellarmass Project\Stellarmap\ParserTester\obj\DSRelease\ParserTester.exe
+C:\Users\James\Documents\Projects\Stellarmass Project\Stellarmap\ParserTester\obj\DSRelease\ParserTester.pdb
+C:\Users\James\Documents\Projects\Stellarmass Project\Stellarmap\ParserTester\bin\DSRelease\ParserTester.exe.config
+C:\Users\James\Documents\NetBeansProjects\Stellarmap\ParserTester\bin\DSRelease\ParserTester.exe.config
+C:\Users\James\Documents\NetBeansProjects\Stellarmap\ParserTester\bin\DSRelease\ParserTester.exe
+C:\Users\James\Documents\NetBeansProjects\Stellarmap\ParserTester\bin\DSRelease\ParserTester.pdb
+C:\Users\James\Documents\NetBeansProjects\Stellarmap\ParserTester\bin\DSRelease\LPCParser.dll
+C:\Users\James\Documents\NetBeansProjects\Stellarmap\ParserTester\bin\DSRelease\LPCParser.pdb
+C:\Users\James\Documents\NetBeansProjects\Stellarmap\ParserTester\obj\DSRelease\ResolveAssemblyReference.cache
+C:\Users\James\Documents\NetBeansProjects\Stellarmap\ParserTester\obj\DSRelease\ParserTester.exe
+C:\Users\James\Documents\NetBeansProjects\Stellarmap\ParserTester\obj\DSRelease\ParserTester.pdb

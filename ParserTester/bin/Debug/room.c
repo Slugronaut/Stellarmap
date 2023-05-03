@@ -1,0 +1,5 @@
+inherit DICKS;
+FUnc()
+	{
+	call();
+	}

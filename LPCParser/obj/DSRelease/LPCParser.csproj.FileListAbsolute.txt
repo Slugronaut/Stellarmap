@@ -1,0 +1,10 @@
+C:\Users\James\Documents\Projects\Stellarmass Project\Stellarmap\LPCParser\bin\DSRelease\LPCParser.dll
+C:\Users\James\Documents\Projects\Stellarmass Project\Stellarmap\LPCParser\bin\DSRelease\LPCParser.pdb
+C:\Users\James\Documents\Projects\Stellarmass Project\Stellarmap\LPCParser\obj\DSRelease\ResolveAssemblyReference.cache
+C:\Users\James\Documents\Projects\Stellarmass Project\Stellarmap\LPCParser\obj\DSRelease\LPCParser.dll
+C:\Users\James\Documents\Projects\Stellarmass Project\Stellarmap\LPCParser\obj\DSRelease\LPCParser.pdb
+C:\Users\James\Documents\NetBeansProjects\Stellarmap\LPCParser\bin\DSRelease\LPCParser.dll
+C:\Users\James\Documents\NetBeansProjects\Stellarmap\LPCParser\bin\DSRelease\LPCParser.pdb
+C:\Users\James\Documents\NetBeansProjects\Stellarmap\LPCParser\obj\DSRelease\ResolveAssemblyReference.cache
+C:\Users\James\Documents\NetBeansProjects\Stellarmap\LPCParser\obj\DSRelease\LPCParser.dll
+C:\Users\James\Documents\NetBeansProjects\Stellarmap\LPCParser\obj\DSRelease\LPCParser.pdb

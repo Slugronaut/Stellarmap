@@ -1,0 +1,10 @@
+C:\Users\James\Desktop\Stellarmass Project\Stellarmap\LPCParser\bin\Debug\LPCParser.dll
+C:\Users\James\Desktop\Stellarmass Project\Stellarmap\LPCParser\bin\Debug\LPCParser.pdb
+C:\Users\James\Desktop\Stellarmass Project\Stellarmap\LPCParser\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\James\Desktop\Stellarmass Project\Stellarmap\LPCParser\obj\Debug\LPCParser.dll
+C:\Users\James\Desktop\Stellarmass Project\Stellarmap\LPCParser\obj\Debug\LPCParser.pdb
+C:\Users\James\Documents\Projects\Stellarmass Project\Stellarmap\LPCParser\bin\Debug\LPCParser.dll
+C:\Users\James\Documents\Projects\Stellarmass Project\Stellarmap\LPCParser\bin\Debug\LPCParser.pdb
+C:\Users\James\Documents\Projects\Stellarmass Project\Stellarmap\LPCParser\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\James\Documents\Projects\Stellarmass Project\Stellarmap\LPCParser\obj\Debug\LPCParser.dll
+C:\Users\James\Documents\Projects\Stellarmass Project\Stellarmap\LPCParser\obj\Debug\LPCParser.pdb
