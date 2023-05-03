@@ -1,0 +1,135 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+	<head>
+		<title>Stellarmap Update Notes</title>
+		<link rel="stylesheet" type="text/css" href="manual.css" />
+	</head>
+	<body>
+	<div class="main">
+	<h3>Release Notes</h3>
+	<p>Because there are two versions of Stellarmap, one for general Dead Souls use and one with Stellarmass-specific features,
+	some updates may apply only to one or the other. In such cases the symbols &lt;DS&gt; and &lt;SM&gt; will be used to signify
+		which appropriately.
+	<br />
+	<br />
+	<a href="index.htm">Back to Dowload Page</a>
+	<br />
+	<br />
+	<br />
+	</p>
+  
+  
+  <h3>June 1, 2010</h3>
+    <ul>
+      <li>Mappings can now take arrays as a key. Finally, QCS-generated rooms can be imported without editing!</li>
+      <li>Mappings and arrays now perform some extra formatting checks to ensure any trailing commas
+        are removed (the parser will choke on it). Unfortunately this means code that was nicely formatted
+        by people or QCS will become somewhat mangled after being imported and saved in Stellarmap.</li>
+      <li>Fixed a bug that would not allow you to move rooms down and to the right when the viewport was scrolled
+        too far above and to the left of the origin.</li>
+      <li>Probably a few other things over the last couple months that I can't remember now.</li>
+    </ul>
+    
+	<h3>March 20, 2010</h3>
+	<ul>
+		<li>Changed the room properties box so that it uses a list defined in the configuration file</li>
+		<li>Added 'login' property for rooms</li>
+		<li>&lt;SM&gt; Added 'hospital' property for rooms</li>
+		<li>Added function controls for <em>SetTerrainType()</em> and <em>SetMedium()</em> for
+			rooms</li>
+		<li>Function controls now have the ability to specify an additional header file they
+			might require to be included.</li>
+		<li>Fixed a bug that was causing data to not save correctly</li>
+		<li>Fixed a bug with imported rooms clearing their data after selecting a different
+			room (at least, I think I fixed it... that is to say.. it just went away magically
+			after a couple weeks of not doing anything on this project)</li>
+		<li>Fixed another bug that would cause a crash if a room were removed from the project
+			(deleted) and then re-imported back in without first saveing and reloading the workspace.</li>
+		<li>Fixed item generators so that they properly output their data. Whoops.</li>
+	</ul>
+	
+	<h3>February 20, 2010</h3>
+	<ul>
+		<li>Integrated a spell checker into the basic text editor. Also added the standard cut/copy/paste context menu items.</li>
+		<li>text editor is now (approximately) 80 characters wide (getting it spot on is tougher
+			than I thought it would be though)</li>
+		<li>fixed npc inventory crasher due to bad parameter type</li>
+		<li>fixed bad output for vendor storage room due to bad parameter type</li>
+		<li>external domains can now have their inventory and room names imported into a workspace.
+			Just place the master .XML file in the /assets/domainreferences folder and they
+			will show up on the import list</li>
+		<li>many internal refactorings of code will hopefully make life easier down the road</li>
+		<li>added access to text editor to all textbox-related function controls</li>
+		<li>Npcs can now be given points for other languages</li>
+		<li>&lt;SM&gt; Added flag to signal if an NPC should drop its inventory on death
+			or just destroy it</li>
+		<li>&lt;SM&gt; Added a map of item drops rates on npc death</li>
+		<li>&lt;SM&gt; Added spacesuit option for armor</li>
+		<li>Ok, npc inventories work for real this time</li>
+		<li>Added one more encoding choice. A non-signature version of UTF8. Mostly for backwards
+			compatibility. It has been set as the default encoding</li>
+		<li>fixed a crasher when canceling openning a domain for the first time</li>
+		<li>fixed a bug that was causing enters to be mapped to exits</li>
+		<li>fixed a bug that could cause a crash when assigning exits or enters to rooms just
+			after loading a domain but before selecting any rooms that did not previously have
+			exits or enters</li>
+		<li>fixed a bug where if a room had multiple exits going to the same desination all
+			exits would be removed if any one was removed</li>
+		<li>changed item/armor generators' calls from 'SetValue()' to 'SetBaseCost()'</li>
+		<li>Added cost generators (however, prices are based on Stellarmass)</li>
+		<li>Renaming rooms is difficult and error prone so I took the lazy way out. There are
+			now two ways to create a room. The old way (quick) where a name is assigned and the
+			new way (slow) where you have to fill in a textbox with the new name</li>
+		<li>Added the ability to import items into the workspace. You can now reference them
+			in the inventories lists</li>
+		<li>Added meals to the generator</li>
+		<li>Redesigned the config file to allow arbitrary lists to be added. This allows users
+			to define their own custom lists within the config file that can then be accessed
+			by the dynamic item generators. I've also appended many default lists from Dead
+			Souls that weren't available before including:<em> build types, bodytypes, mouth types,
+				vision, resperation types, size types, meal types, mediums, terrain types, motion,</em>
+			and <em>booby traps.</em> See the config file for examples of how to add new types
+			using the &lt;list&gt; tag</li>
+		<li>Added support for multi-parameter dynamic function controls. See <em>inheriteditems.xml</em>
+			and the entry for <em>meals</em> for an example</li>
+	</ul>
+	
+	<h3>February 2, 2010</h3>
+	<ul>
+		<li>Fixed a couple more show stoppers that appeared in the last release due to a bad
+		config file for Sentient NPCs. <strong>Be sure to delete any old version of the file
+				<em>inheritednpcs.xml</em> so that the new executable can create a new version without
+				the errors in it.</strong></li>
+		<li>Made the font bigger in the text editor windows for strings. I must be gettin' old</li>
+	</ul>
+		
+	<h3>January 30, 2010</h3>
+	<ul><li>The location of the last project you opened or created is now saved in the config
+		file</li>
+		<li>The currently selected room's name is now displayed above the Domain Map View rather
+			than on the room edior panel</li>
+		<li>Door generator now creates an array of Ids rather than a single string. It also tries
+			to create default ids for most common doors</li>
+		<li>Npcs' inventory lists now works</li>
+		<li>Added Sentient Npcs (LIB_SENTIENT), Vendors, Barkeeps to the NPC generator</li>
+		<li>Added support for text file encoding/decoding choice (found in Domain Options in
+			the menu)</li>
+		<li>Added support for line ending choice (found in Domain Options in the menu)</li>
+		<li>Removed some of the features that were relevant only to our mud (firearms and ammo
+			generators)</li>
+		<li>There are now two disinct binaries generated. One with Stellarmass-only features
+			and one for general Dead Souls users</li>
+		<li>&lt;SM&gt; Added 'mechs allowed' property to rooms</li>
+		<li>&lt;DS&gt; Removed the native Windows API call to MessageBeep(). Hopefully this
+			will make Stellarmap more Mono compatible</li>
+		<li>Found and fixed a couple show stoppers in the function controls used for processing
+			mappings.&nbsp;</li>
+	</ul>
+	
+	
+	<br />
+	<br />
+	<br />
+	</div>
+	</body>
+</html>

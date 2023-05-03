@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<deadsouls>
+  <!-- Describes the types of items that can be created. Also used for menu text -->
+	<itemclasses>
+    <!-- TODO Come up with a way of specifying which headers are included and objects are inherited -->
+		<itemclassdeclaration id="Npc">npc</itemclassdeclaration>
+		<itemclassdeclaration id="Sentient Npc">sentient</itemclassdeclaration>
+		<itemclassdeclaration id="Vendor (sentient)">vendor</itemclassdeclaration>
+		<itemclassdeclaration id="Barkeep (sentient)">barkeep</itemclassdeclaration>
+	</itemclasses>
+	
+	<itemclass class ="npc">
+		<control type="CheckBox" paramtype="inherit" text="Inherit LIB_NPC" tooltip="Make sure this is checked or your object won't work!" function="inherit LIB_NPC;" enable="false">
+			  <init>1</init>
+		</control>
+	</itemclass>
+
+	<itemclass class ="sentient">
+		<control type="CheckBox" paramtype="inherit" text="Inherit LIB_SENTIENT" tooltip="Make sure this is checked or your object won't work!" function="inherit LIB_SENTIENT;" enable="false">
+			<init>1</init>
+		</control>
+		<control type="ListBuilder" paramtype="array" text="Wander Path" tooltip="The sequencial list of actions performed by this sentient npc." function="SetWanderPath">
+		</control>
+		<control type="CheckBox" paramtype="property" text="Loop Wander When Done" tooltip="When set, the npc will start over at the beginning of the wander commands list when finished." function="SetWanderRecurse">
+			<init>1</init>
+		</control>
+		<control type="NumberEntry" min="0" max="100000" inc="1" text="Wander Speed (in heartbeats):" tooltip="The rate at which commands are executed in hearbeats." function="SetWanderSpeed">
+			<init>5</init>
+		</control>
+		<control type="MapBuilder" paramtype="mapping" text="Talk Responses" tooltip="Words to which this Npc will respond." function="SetTalkResponses">
+		</control>
+    <control type="MapBuilder" paramtype="mapping" text="Emote Responses" tooltip="Emotes to which this Npc will respond." function="SetEmoteResponses">
+    </control>
+    <control type="MapBuilder" paramtype="mapping" text="Request Responses" tooltip="Requests to which this Npc will respond." function="SetRequestResponses">
+    </control>
+		<control type="MapBuilder" paramtype="mapping" text="Asked Command Responses" tooltip="Commands to which this Npc will respond." function="SetCommandResponses">
+		</control>
+    <control type="MapBuilder" paramtype="mapping" text="Consult Responses" tooltip="General consultation response." function="SetConsultResponses">
+    </control>
+	</itemclass>
+	
+	<itemclass class ="vendor">
+		<control type="ComboSelection" paramtype="string" text="Storage Room:" tooltip="The location where all of the vendor's goods are kept." function="SetStorageRoom">
+			<list>rooms</list>
+		</control>
+		<control type="NumberEntry" min="1" max="100" inc="1" text="Max Items:" tooltip="" function="SetMaxItems">
+			<init>20</init>
+		</control>
+		<control type="ComboSelection" paramtype="string" text="Local Currency:" tooltip="" function="SetLocalCurrency">
+			<list>currencies</list>
+		</control>
+		<control type="CheckList" paramtype="orlist" text="Vendor Type" tooltip="" function="SetVendorType" header="vendor_types.h">
+			<list>vendortypes</list>
+		</control>
+
+
+		<control type="CheckBox" paramtype="inherit" text="Inherit LIB_VENDOR" tooltip="Make sure this is checked or your object won't work!" function="inherit LIB_VENDOR;" enable="false">
+			<init>1</init>
+		</control>
+		<control type="ListBuilder" paramtype="array" text="Wander Path/Commands" tooltip="The sequencial list of actions performed by this sentient npc." function="SetWanderPath">
+		</control>
+		<control type="CheckBox" paramtype="property" text="Loop Commands When Finished" tooltip="When set, the npc will start over at the beginning of the wander commands list when finished." function="SetWanderRecurse">
+			<init>1</init>
+		</control>
+		<control type="NumberEntry" min="0" max="100000" inc="1" text="Speed (in heartbeats):" tooltip="The rate at which commands are executed in hearbeats." function="SetWanderSpeed">
+			<init>5</init>
+		</control>
+    <control type="MapBuilder" paramtype="mapping" text="Talk Responses" tooltip="Words to which this Npc will respond." function="SetTalkResponses">
+    </control>
+    <control type="MapBuilder" paramtype="mapping" text="Emote Responses" tooltip="Emotes to which this Npc will respond." function="SetEmoteResponses">
+    </control>
+    <control type="MapBuilder" paramtype="mapping" text="Request Responses" tooltip="Requests to which this Npc will respond." function="SetRequestResponses">
+    </control>
+    <control type="MapBuilder" paramtype="mapping" text="Asked Command Responses" tooltip="Commands to which this Npc will respond." function="SetCommandResponses">
+    </control>
+    <control type="MapBuilder" paramtype="mapping" text="Consult Responses" tooltip="General consultation response." function="SetConsultResponses">
+    </control>
+	</itemclass>
+	
+	<itemclass class ="barkeep">
+		<control type="RightComboMapBuilder" paramtype="mapping" text="Menu Items:" tooltip="" function="SetMenuItems">
+			<list>inventory</list>
+		</control>
+		<control type="ComboSelection" paramtype="string" text="Local Currency:" tooltip="" function="SetLocalCurrency">
+			<list>currencies</list>
+		</control>
+
+		<control type="CheckBox" paramtype="inherit" text="Inherit LIB_BARKEEP" tooltip="Make sure this is checked or your object won't work!" function="inherit LIB_BARKEEP;" enable="false">
+			<init>1</init>
+		</control>
+		<control type="ListBuilder" paramtype="array" text="Wander Path/Commands" tooltip="The sequencial list of actions performed by this sentient npc." function="SetWanderPath">
+		</control>
+		<control type="CheckBox" paramtype="property" text="Loop Commands When Finished" tooltip="When set, the npc will start over at the beginning of the wander commands list when finished." function="SetWanderRecurse">
+			<init>1</init>
+		</control>
+		<control type="NumberEntry" min="0" max="100000" inc="1" text="Speed (in heartbeats):" tooltip="The rate at which commands are executed in hearbeats." function="SetWanderSpeed">
+			<init>5</init>
+		</control>
+    <control type="MapBuilder" paramtype="mapping" text="Talk Responses" tooltip="Words to which this Npc will respond." function="SetTalkResponses">
+    </control>
+    <control type="MapBuilder" paramtype="mapping" text="Emote Responses" tooltip="Emotes to which this Npc will respond." function="SetEmoteResponses">
+    </control>
+    <control type="MapBuilder" paramtype="mapping" text="Request Responses" tooltip="Requests to which this Npc will respond." function="SetRequestResponses">
+    </control>
+    <control type="MapBuilder" paramtype="mapping" text="Asked Command Responses" tooltip="Commands to which this Npc will respond." function="SetCommandResponses">
+    </control>
+    <control type="MapBuilder" paramtype="mapping" text="Consult Responses" tooltip="General consultation response." function="SetConsultResponses">
+    </control>
+	</itemclass>
+
+</deadsouls>

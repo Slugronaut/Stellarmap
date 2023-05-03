@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<deadsouls>
+  <!-- Describes the types of items that can be created. Also used for menu text -->
+	<itemclasses>
+		<!-- TODO Come up with a way of specifying which headers are included and objects are inherited -->
+		<itemclassdeclaration id="Generic Item">item</itemclassdeclaration>
+		<itemclassdeclaration id="Meal">meal</itemclassdeclaration>
+		</itemclasses>
+	
+	<!--
+	-<itemclass> describes what types of controls and functions are dynamically generated
+  
+	-<control> describe a control's relation to the LPC function calls it generates
+		-control types: CheckBox, CheckList, ComboSelection,  ListBuilder, MapBuilder, NumberEntry, TextEntry
+  
+	-<value> describes a value to be displayed in any list or combo boxes
+  
+  
+  
+	-functions are represented in the form of it's name and what control type will be used
+	 to generate the text that goes between its parenteses
+   
+	<control type="" text="" tooltip="" function="">
+	initalvalue or values
+	</control>
+	-->
+	
+	<itemclass class ="item">
+		<control type="CheckBox" paramtype="inherit" text="Inherit LIB_ITEM" tooltip="Make sure this is checked or your object won't work!" function="inherit LIB_ITEM;" enable="false">
+			<init>1</init>
+		</control>
+	</itemclass>
+
+	<itemclass class="meal">
+		<control type="CheckBox" paramtype="inherit" text="Inherit LIB_ITEM" tooltip="Make sure this is checked or your object won't work!" function="inherit LIB_ITEM;" enable="false">
+			<init>0</init>
+		</control>
+		<control type="CheckBox" paramtype="inherit" text="Inherit LIB_MEAL" tooltip="Make sure this is checked or your object won't work!" function="inherit LIB_MEAL;" enable="false">
+			<init>1</init>
+		</control>
+		<control type ="CheckList" paramtype="orlist" text="Meal Types" tooltip="Identifies the type or types of nurishment the meal provides." function="SetMealType" header="meal_types.h">
+			<list>mealtypes</list>
+		</control>
+		<control type="NumberEntry" min="0" max="1000" inc="1" text="Strength:" tooltip="The total effect that the meal will have on hp/st/poison/etc. It also determines the value of the item." function="SetStrength">
+			<init>1</init>
+		</control>
+		<control type="ComboSelection" paramtype="string" text="Empty Item (usually for drinks):" tooltip="The item to be placed in the chacater's inventory when all of the meal has been consumed 9for example, an empty bottle." function="SetEmptyItem">
+			<list>inventory</list>
+		</control>
+		<control type="TextEntry" paramtype="string" text="Name When Empty:" tooltip="" function="SetEmptyName">
+			<init></init>
+		</control>
+		<control type="TextEntry" paramtype="string" text="Short Desc When Empty:" tooltip="" function="SetEmptyShort">
+			<init></init>
+		</control>
+		<control type="TextEntry" paramtype="string" text="Long Desc When Empty:" tooltip="" function="SetEmptyLong">
+			<init></init>
+		</control>
+		<control type="MultiParam" paramtype="MultiParam" text="Meal Message" tooltip="The message printed when the meal is consumed" function="SetMealMessages">
+			<control type="TextEntry" subtype="param" paramtype="string" text="Player Message:" tooltip="" function="param1">
+				<init>You consume your meal.</init>
+			</control>
+			<control type="TextEntry" subtype="param" paramtype="string" text="Room Message:" tooltip="" function="param2">
+				<init>$N consumes $P meal.</init>
+			</control>
+		</control>
+    <disable>inherit LIB_STORAGE;</disable>
+ </itemclass>
+  
+</deadsouls>

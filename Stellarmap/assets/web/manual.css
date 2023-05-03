@@ -1,0 +1,183 @@
+
+/*
+The majority of the page is stored within a <div> tag that usesthis style. It is what
+applies the gray background and pushes the text towards the middle of the layout.
+*/
+.main
+{
+	background-color: #2c2c2c;
+	color: #ccddee;
+	font-family: Arial;
+	margin-left: 14%;
+	margin-right: 14%;
+	margin-bottom: 15%;
+	margin-top: 8%;
+	padding: 2%;
+	max-width: 85%;
+	border-bottom: #ccddee thin solid;
+	border-left: #ccddee thin solid;
+	border-top: #ccddee thin solid;
+	border-right: #ccddee thin solid;
+}
+
+.raceimage
+{
+	float: right;
+	width: 50%;
+	border-bottom: #ccddee thin solid;
+	border-left: #ccddee thin solid;
+	border-top: #ccddee thin solid;
+	border-right: #ccddee thin solid;
+	margin-left: 5px;
+	margin-bottom: 5px;
+}
+
+body
+{
+	background-color: #2c2c2c;
+	background-repeat: repeat;
+	background-image: url(space_03.jpg);
+	background-attachment:fixed;
+
+}
+
+p
+{
+	color:#ccddee;
+	font-family:Arial;
+}
+
+code
+{
+	color:#99aaff;
+}
+
+table
+{
+	background-color:#777777;
+	border:none;
+	width:100%;
+	padding:8px;
+	margin:0px;
+	color:Black;
+}
+
+table.stats
+{
+	background-color: #2c2c2c;
+	color: #ccddee;
+	border:2px;
+	padding:2px;
+	margin:0px;
+	width:auto;
+}
+
+.racedesc
+{
+	background-color: Transparent;
+	color: #ccddee;
+	padding: 0px;
+	margin: 0px;
+	width: 500px;
+	border-bottom: 0px;
+	border-left: 0px;
+	border-collapse: collapse;
+	border-top: 0px;
+	border-right: 0px;
+}
+
+tr.stats
+{
+	
+	background-color: #2c2c2c;
+	color: #ccddee;
+	border:2px;
+	padding:2px;
+	margin:0px;
+	width:auto;
+}
+
+caption
+{
+	color:White;
+	background-color:#8090c7;
+	margin:0px;
+	border:none;
+}
+
+th
+{
+	border:0px;
+	margin:0;
+	border:none;
+}
+	
+tr
+{
+	background-color:#eeeeee;
+	border:none;
+	width:100%;
+	padding:8px;
+	margin:0px;
+	border-spacing:0px;
+}
+
+td
+{
+	text-align:center;
+	padding:8px;
+}
+
+td.desc
+{
+	text-align:left;
+}
+
+h1,h2,h3,h4,h5,h6
+{
+	color:#cceeff;
+	text-transform:capitalize;
+	text-decoration:underline;
+}
+
+th
+{
+	background-color:Silver;
+	color:Black;
+	padding:8px;
+	text-align:center;
+	width:10%;
+}
+
+th.desc
+{
+	width:80%;
+}
+
+a
+{
+	text-decoration:none;
+	color:#7070EE;
+}
+
+a:link
+{
+	color:#99ccff;
+}
+
+
+a:visted
+{
+	color:#7070EE;
+}
+
+a:hover
+{
+	color:#ffffff;
+}
+
+a:active
+{
+	color:#7070EE;
+}
+

@@ -1,0 +1,122 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+	<head>
+		<title>Stellarmap Main Page</title>
+		<link rel="stylesheet" type="text/css" href="manual.css" />
+	</head>
+	<body>
+	<div class="main">
+		<strong><span style="font-size: 14pt">STELLARMAP: The Visual Editor for DeadSouls Domains,
+			Items, and Npcs!<br />
+			<br />
+			Last Update: March ?, 2010</span></strong><br />
+		<br />
+	I dunno about you guys but I hate typing anything I don't have to. Dead souls is awesome in that I can custom code everything, and QCS is great for quick stuff but it gets messy when things get big. Remembering long lists of stuff or even which room I'm in when I edit can be a pain. For the less technical members of our mud its also a pain to explain LPC and trying to teach them QCS is almost as hard (maybe harder). So to that end I have create Stellarmap, a visual editor and code generator for Dead Souls domains, items, and npcs!<br />
+
+It ain't pretty and it ain't elegant but it gets the job done. The features include:<br />
+		<ul>
+			<li>Visually create domain rooms and floor plans</li>
+			<li>Edit most common properties of rooms like, short descriptions, long descriptions, static items, room properties, etc </li>
+			<li>Visually connect rooms to one another to generate exits&nbsp;</li>
+			<li>Generate exits and enters using menus</li>
+			<li>Fill rooms' inventories</li>
+			<li>Generate basic items, doors, armors and npcs - all of which are added to the domain workspace so that they can be included into the rooms using menus</li>
+			<li>Configurable lists - so each mud can have the proper races, classes, monies, limbs, etc for their mud when generating items and npcs</li>
+			<li>Cross-reference domains' rooms and items using automatically defined constants so
+				that they can easily be shared without having to hardcode directories.</li>
+			<li>Extensible generators - if you have a special item or creature that inherits basic functionality from LIB_ITEM, LIB_ARMOR, or LIB_NPC it may be possible to edit config files to add those extensions to Stellarmap's generators! No recompiling, no mess!</li>
+		</ul>
+		<p>
+			Go Here For Latest Update Notes: <a href="updatenotes.htm">Update Notes</a><br />
+		</p>
+		Files:<br />
+
+		<a href="sm_stellarmap.zip">Stellarmass Version - this one has features useful only to creators for the Stellarmass mud</a><br />
+		<br />
+		<a href="ds_stellarmap.zip">General Dead Souls Version - this one if for general Dead Souls users</a><br />
+		<br />
+		Screenies:<br />
+		<a href="http://s396.photobucket.com/albums/pp45/deniedsluggysluggy/?action=view&current=smscreen_01.png" target="_blank"><img src="http://i396.photobucket.com/albums/pp45/deniedsluggysluggy/smscreen_01.png" border="0" alt="Photobucket" width="600"></a><br />
+		<br />
+		<br />
+		<br />
+
+		<span style="font-size: 14pt"><strong>&nbsp;Known Issues:</strong> </span>
+		<br />
+ I've been putting in a lot of late hours on this and have been rushing through the whole thing so it has only had a cursory glance for testing. Consider this beta software until it has been out and in use for a while. As of now, there are a few known issues to watch out for:<br />
+		<br />
+		<br />
+		<em>&nbsp;General Issues: </em>
+		<ul>
+			<li>removing static items from a room does not remove any smells/sounds/searches/exits/enters etc based on them. You will
+ have to remove them manually </li>
+			<li>using the mouse wheel to scroll the domain map may also cause the main window to scroll </li>
+		</ul>
+		<p>
+			<em>
+	
+Function Controls Issues: </em>
+		</p>
+		<ul>
+			<li>It's pretty easy to forget which controls automatically insert quotes around your text and which do not. Remember, the text you type gets translated literally to the code generated. In some cases you can fudge things by using the verbatim symbol '$' at the start. A good example is the SetAction, function for NPCs. The second parameter is automatically turned into a string literal unless you use $ in which case you can pass an array </li>
+			<li>There is no proper escape sequence for quotes. Having a \' at the end of a textbox can cause it to choke, try using the verbatim symbol and the encasing the entire string in quotes in such cases. </li>
+			<li>There is no proper escape for $ at the start of strings<br />
+			</li>
+		</ul>
+		<p>
+			&nbsp;</p>
+		<p>
+			<strong><span style="font-size: 14pt">
+
+
+
+Future Features:</span></strong></p>
+		<p>
+I still have a few things left I want to do before I consider this project done. However, I need to take some time off before my head explodes so it may be a few weeks before I start up again. Once I have finished these few things, squashed any bugs that may have been reported, and do some cleanup on the uglier parts of the source code I'll probably release it all for others to do as they please.</p>
+		<em>
+
+Small Fries:<br />
+		</em>
+		<ul>
+			<li>a tree view for SetInventory - The current combo box is getting ugly with large projects</li>
+			<li>cleanup generated files on save (sometimes they get extra tabs and newlines due to my crumby LPC parser)</li>
+		</ul>
+		<em>
+
+
+Biggies:</em><br />
+		<br />
+		<ul>
+<li>Domain upload/download - This is one of the other key ideas that propted this project.
+		The ability to share and reference each other's domains is a very important aspect.
+		I want to find a way to interface with Dead Soul's ftp server to allow creators to log in and upload their domains they have been creating. Also, their master files should be uploaded to a global repository (probably a domain that everyone has access to) where other users that logged in can download them in order to reference each other's stuff.</li>
+		</ul>
+		<br />
+		<br />
+		<strong>
+
+
+Other Notes:</strong><br />
+There are two very minor mods that must be made to Dead Souls for doors and armors to work. You can read more about it with the help file included. All you have to do is add a small and simple function to exits.c and base_armor.c. I tried to avoid this but really this turned out to the most effective option.<br />
+		<br />
+		<strong>
+
+
+For Nixers:<br />
+		</strong>
+I developed Stellarmass using C# and .NET 2.0 in Visual Studio 2005. Running it through mono's migration analyzer now says everything is clear. However, I have
+		tried running it in Mono and it fails to even start. I will look into it if and when
+		I get the chance.<br />
+		<br />
+		<br />
+		<br />
+
+Have fun and let me know what crashes!<br />
+		~Sluggy<br />
+		<br />
+		<br />
+		<br />
+		<a href="../">Back to Stellarmass</a>
+	</div>
+	</body>
+</html>

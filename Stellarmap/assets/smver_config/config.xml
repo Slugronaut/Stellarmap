@@ -1,0 +1,429 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<stellarmap>
+  <imageboxes width="38" height="38" />
+  <nodeboxes width="8" height="8" />
+  <baseroom name="room" />
+  <startroom name="start" />
+  <exitlinewidth width="1" />
+  <lastdiropened path="" />
+  <lpcencoding type="utf-8 (no signature)" />
+  <lpclineending type ="Unix (LF)" />
+  <spellcheck_aff name ="en_US.aff" />
+  <spellcheck_dic name ="en_US.dic" />
+		<icons>
+			<icon file="\deathtrap.bmp" desc="It's a trap!"></icon>
+			<icon file="\entranceexit.bmp" desc="Domain Entrance / Exit"></icon>
+			<icon file="\finalboss.bmp" desc="Final Boss"></icon>
+			<icon file="\hiddenroom.bmp" desc="Hidden Room"></icon>
+			<icon file="\interest.bmp" desc="Interest"></icon>
+			<icon file="\updown.bmp" desc="Up / down"></icon>
+			<icon file="\bank.bmp" desc="Bank"></icon>
+			<icon file="\bar.bmp" desc="Bar"></icon>
+			<icon file="\hospital.bmp" desc="Hospital"></icon>
+			<icon file="\lawmanoffice.bmp" desc="Law office"></icon>
+			<icon file="\lounge.bmp" desc="Lounge"></icon>
+			<icon file="\stargate.bmp" desc="Warpgate"></icon>
+			<icon file="\armor.bmp" desc="Armor Shop"></icon>
+			<icon file="\clothingstore.bmp" desc="Clothing Store"></icon>
+			<icon file="\food.bmp" desc="Food"></icon>
+			<icon file="\generalstore.bmp" desc="General Store"></icon>
+			<icon file="\pawnshop.bmp" desc="Pawnshop"></icon>
+			<icon file="\petshop.bmp" desc="Pet Shop"></icon>
+			<icon file="\repairshop.bmp" desc="Repair Shop"></icon>
+			<icon file="\vehicles.bmp" desc="Vehicle Shop"></icon>
+			<icon file="\weapons.bmp" desc="Weapon Shop"></icon>
+		</icons>
+		<list type="vendortypes">
+			<entry>VT_AMMO</entry>
+			<entry>VT_ARMOR</entry>
+			<entry>VT_CONTRABAND</entry>
+			<entry>VT_DRINK</entry>
+			<entry>VT_FISHING</entry>
+			<entry>VT_FOOD</entry>
+			<entry>VT_HERB</entry>
+			<entry>VT_LIGHT</entry>
+			<entry>VT_MAGIC</entry>
+			<entry>VT_PLANT</entry>
+			<entry>VT_TREASURE</entry>
+			<entry>VT_WEAPON</entry>
+		</list>
+		<list type="damagetypes">
+			<entry>ACID</entry>
+			<entry>ANOXIA</entry>
+			<entry>BALLISTIC</entry>
+			<entry>BITE</entry>
+			<entry>BLADE</entry>
+			<entry>BLUNT</entry>
+			<entry>COLD</entry>
+			<entry>DEATHRAY</entry>
+			<entry>DISEASE</entry>
+			<entry>DRAMA</entry>
+			<entry>EMOTIONAL</entry>
+			<entry>EMP</entry>
+			<entry>GAS</entry>
+			<entry>HEAT</entry>
+			<entry>INERTIA</entry>
+			<entry>KARMA</entry>
+			<entry>KNIFE</entry>
+			<entry>MAGIC</entry>
+			<entry>OTHER</entry>
+			<entry>OVERPRESSURE</entry>
+			<entry>PIERCE</entry>
+			<entry>PLASMA</entry>
+			<entry>POISON</entry>
+			<entry>PSIONIC</entry>
+			<entry>SHOCK</entry>
+			<entry>SONIC</entry>
+			<entry>TRAUMA</entry>
+			<entry>UNDERPRESSURE</entry>
+			<entry>WATER</entry>
+			<entry>ALL_DAMAGE</entry>
+		</list>
+		<list type="armortypes">
+			<entry>A_AMULET</entry>
+			<entry>A_ARMOR</entry>
+			<entry>A_BELT</entry>
+			<entry>A_BODY_ARMOR</entry>
+			<entry>A_BOOT</entry>
+			<entry>A_CLOAK</entry>
+			<entry>A_COLLAR</entry>
+			<entry>A_CUSTOM</entry>
+			<entry>A_GLOVE</entry>
+			<entry>A_HELMET</entry>
+			<entry>A_LONG_GLOVE</entry>
+			<entry>A_LONG_SOCK</entry>
+			<entry>A_PANTS</entry>
+			<entry>A_RING</entry>
+			<entry>A_SHIELD</entry>
+			<entry>A_SHIRT</entry>
+			<entry>A_SOCK</entry>
+			<entry>A_VEST</entry>
+			<entry>A_VISOR</entry>
+			<entry>A_WEAPON</entry>
+		</list>
+		<list type="weapontypes">
+			<entry>blunt</entry>
+			<entry>blade</entry>
+			<entry>knife</entry>
+			<entry>projectile</entry>
+			<entry>special</entry>
+			<entry>magic</entry>
+			<entry>melee</entry>
+		</list>
+		<list type="limbs">
+			<entry>torso</entry>
+			<entry>neck</entry>
+			<entry>head</entry>
+			<entry>tail</entry>
+			<entry>tail gripper</entry>
+			<entry>jaw</entry>
+			<entry>right arm</entry>
+			<entry>left arm</entry>
+			<entry>right hand</entry>
+			<entry>left hand</entry>
+			<entry>right gripper</entry>
+			<entry>left gripper</entry>
+			<entry>right paw</entry>
+			<entry>left paw</entry>
+			<entry>right leg</entry>
+			<entry>left leg</entry>
+			<entry>b-right leg</entry>
+			<entry>b-left leg</entry>
+			<entry>f-right leg</entry>
+			<entry>f-left leg</entry>
+			<entry>right foot</entry>
+			<entry>left foot</entry>
+			<entry>right tail</entry>
+			<entry>left tail</entry>
+			<entry>right wing</entry>
+			<entry>left wing</entry>
+		</list>
+		<list type="bodytypes">
+			<entry>B_HUMANOID</entry>
+			<entry>B_QUADRUPED</entry>
+			<entry>B_BIPED</entry>
+			<entry>B_CHIROPTEROID</entry>
+			<entry>B_INSECTOID</entry>
+			<entry>B_TENTACLED</entry>
+			<entry>B_ARTHROPOD</entry>
+			<entry>B_CRUSTACEAN</entry>
+			<entry>B_PINNIPED</entry>
+			<entry>B_CETACEAN</entry>
+			<entry>B_FISH</entry>
+			<entry>B_OCTOPOID</entry>
+			<entry>B_NEBULOUS</entry>
+			<entry>B_CHIMAERA</entry>
+			<entry>B_SNAKE</entry>
+			<entry>B_PLANT</entry>
+			<entry>B_TREE</entry>
+			<entry>B_SPECTRAL</entry>
+			<entry>B_GEOMETRIC</entry>
+			<entry>B_GELATINOUS</entry>
+			<entry>B_ORB</entry>
+			<entry>B_AVIAN</entry>
+			<entry>B_WINGED_MAN</entry>
+			<entry>B_SEMI_BIPEDAL</entry>
+			<entry>B_FLAT</entry>
+			<entry>B_GASTROPOD</entry>
+		</list>
+		<list type="buildtypes">
+			<entry>B_WAIF</entry>
+			<entry>B_THIN</entry>
+			<entry>B_SLIM</entry>
+			<entry>B_MEDIUM</entry>
+			<entry>B_LARGE</entry>
+			<entry>B_HUSKY</entry>
+			<entry>B_STOUT</entry>
+			<entry>B_OBESE</entry>
+			<entry>B_MORBIDLY_OBESE</entry>
+		</list>
+		<list type="sizetypes">
+			<entry>S_MICROSCOPIC</entry>
+			<entry>S_MINISCULE</entry>
+			<entry>S_TINY</entry>
+			<entry>S_VERY_SMALL</entry>
+			<entry>S_SMALL</entry>
+			<entry>S_SOMEWHAT_SMALL</entry>
+			<entry>S_HUMAN_SIZED</entry>
+			<entry>S_SOMEWHAT_LARGE</entry>
+			<entry>S_LARGE</entry>
+			<entry>S_HUGE</entry>
+			<entry>S_GIGANTIC</entry>
+			<entry>S_VAST</entry>
+		</list>
+		<list type="mealtypes">
+			<entry>MEAL_FOOD</entry>
+			<entry>MEAL_DRINK</entry>
+			<entry>MEAL_CAFFEINE</entry>
+			<entry>MEAL_ALCOHOL</entry>
+			<entry>MEAL_POISON</entry>
+			<entry>MEAL_PILL</entry>
+		</list>
+		<list type="mediums">
+			<entry>MEDIUM_LAND</entry>
+			<entry>MEDIUM_AIR</entry>
+			<entry>MEDIUM_SURFACE</entry>
+			<entry>MEDIUM_SPACE</entry>
+			<entry>MEDIUM_WATER</entry>
+			<entry>MEDIUM_METHANE</entry>
+			<entry>MEDIUM_VACUUM</entry>
+		</list>
+		<list type="terraintypes">
+			<entry>T_CUSTOM</entry>
+			<entry>T_OUTDOORS</entry>
+			<entry>T_INDOORS</entry>
+			<entry>T_ROAD</entry>
+			<entry>T_UNDERWATER</entry>
+			<entry>T_SURFACE</entry>
+			<entry>T_MIDAIR</entry>
+			<entry>T_SWAMP</entry>
+			<entry>T_WOODS</entry>
+			<entry>T_JUNGLE</entry>
+			<entry>T_ROUGH</entry>
+			<entry>T_UNDERGROUND</entry>
+			<entry>T_SPACE</entry>
+			<entry>T_MAGMA</entry>
+			<entry>T_PLASMA</entry>
+			<entry>T_PLANAR</entry>
+			<entry>T_SNOW</entry>
+			<entry>T_SAND</entry>
+			<entry>T_ICE</entry>
+			<entry>T_BIOLOGICAL</entry>
+			<entry>T_SEAFLOOR</entry>
+			<entry>T_ALL_OUTDOORS_LAND</entry>
+			<entry>T_ALL_SEA</entry>
+		</list>
+		<list type="vision">
+			<entry>VISION_BLIND</entry>
+			<entry>VISION_TOO_DARK</entry>
+			<entry>VISION_DARK</entry>
+			<entry>VISION_DIM</entry>
+			<entry>VISION_CLEAR</entry>
+			<entry>VISION_LIGHT</entry>
+			<entry>VISION_BRIGHT</entry>
+			<entry>VISION_TOO_BRIGHT</entry>
+		</list>
+		<list type="motions">
+			<entry>M_LAND</entry>
+			<entry>M_AIR</entry>
+			<entry>M_SEA</entry>
+			<entry>M_MAGIC</entry>
+		</list>
+		<list type="mouthtypes">
+			<entry>MOUTH_NONE</entry>
+			<entry>MOUTH_LIPPED</entry>
+			<entry>MOUTH_TOOTHED</entry>
+			<entry>MOUTH_BEAKED</entry>
+			<entry>MOUTH_MANDIBLED</entry>
+			<entry>MOUTH_BALEEN</entry>
+			<entry>MOUTH_TONGUED</entry>
+			<entry>MOUTH_FANGED</entry>
+			<entry>MOUTH_VENOMOUS</entry>
+			<entry>MOUTH_DISEASED</entry>
+			<entry>MOUTH_STATIC</entry>
+			<entry>MOUTH_TUSKED</entry>
+		</list>
+		<list type="respirationtypes">
+			<entry>R_AIR</entry>
+			<entry>R_WATER</entry>
+			<entry>R_VACUUM</entry>
+			<entry>R_METHANE</entry>
+		</list>
+		<list type="boobytraps">
+			<entry>BOOBYTRAP_OPEN</entry>
+			<entry>BOOBYTRAP_CLOSE</entry>
+			<entry>BOOBYTRAP_GET</entry>
+			<entry>BOOBYTRAP_DROP</entry>
+			<entry>BOOBYTRAP_LOCK</entry>
+			<entry>BOOBYTRAP_UNLOCK</entry>
+			<entry>BOOBYTRAP_STEAL</entry>
+			<entry>BOOBYTRAP_WEAR</entry>
+			<entry>BOOBYTRAP_REMOVE</entry>
+			<entry>BOOBYTRAP_WIELD</entry>
+			<entry>BOOBYTRAP_UNWIELD</entry>
+			<entry>BOOBYTRAP_ALL</entry>
+		</list>
+		<list type="races">
+			<entry>daemon</entry>
+			<entry>deferi</entry>
+			<entry>grey</entry>
+			<entry>hoverbot</entry>
+			<entry>human</entry>
+			<entry>kalarian</entry>
+			<entry>mech</entry>
+			<entry>minek</entry>
+			<entry>quadbot</entry>
+			<entry>rerack</entry>
+			<entry>robot</entry>
+			<entry>sentrybot</entry>
+			<entry>seraphim</entry>
+			<entry>springer</entry>
+			<entry>ta'koth</entry>
+			<entry>unidentified</entry>
+			<entry>wraith</entry>
+			<entry>zuraki</entry>
+			<entry>zuranian</entry>
+			<entry>alien</entry>
+			<entry>alien arthropod</entry>
+			<entry>alien avian</entry>
+			<entry>alien cetacean</entry>
+			<entry>alien chiropteroid</entry>
+			<entry>alien crustacean</entry>
+			<entry>alien fish</entry>
+			<entry>alien geometric</entry>
+			<entry>alien gastrupod</entry>
+			<entry>alien gelatinous</entry>
+			<entry>alien insectoid</entry>
+			<entry>alien nebulous</entry>
+			<entry>alien orb</entry>
+			<entry>alien pinniped</entry>
+			<entry>alien plant</entry>
+			<entry>alien quadruped</entry>
+			<entry>alien semibipedal</entry>
+			<entry>alien snake</entry>
+			<entry>alien tentacled</entry>
+			<entry>alien wingedman</entry>
+		</list>
+		<list type="classes">
+			<entry>boss</entry>
+			<entry>explorer</entry>
+			<entry>god</entry>
+			<entry>lawman</entry>
+			<entry>medic</entry>
+			<entry>miniboss</entry>
+			<entry>mob</entry>
+			<entry>npc</entry>
+			<entry>priest</entry>
+			<entry>smuggler</entry>
+			<entry>solderi</entry>
+			<entry>techie</entry>
+			<entry>vitalnpc</entry>
+		</list>
+		<list type="currencies">
+			<entry>silver</entry>
+			<entry>credits</entry>
+		</list>
+		<list type="skills">
+			<entry>knife attack</entry>
+			<entry>blade attack</entry>
+			<entry>blunt attack</entry>
+			<entry>melee attack</entry>
+			<entry>projectile attack</entry>
+			<entry>knife defense</entry>
+			<entry>blade defense</entry>
+			<entry>blunt defense</entry>
+			<entry>melee defense</entry>
+			<entry>projectile defense</entry>
+		</list>
+		<list type="stats">
+			<entry>agility</entry>
+			<entry>charisma</entry>
+			<entry>coordination</entry>
+			<entry>durability</entry>
+			<entry>intelligence</entry>
+			<entry>luck</entry>
+			<entry>speed</entry>
+			<entry>strength</entry>
+			<entry>wisdom</entry>
+		</list>
+		<list type="languages">
+			<entry>Common</entry>
+			<entry>Alien</entry>
+			<entry>Demic</entry>
+			<entry>Groth</entry>
+			<entry>Kalik</entry>
+			<entry>Minnish</entry>
+			<entry>English</entry>
+			<entry>Rahrish</entry>
+			<entry>Binary</entry>
+			<entry>Takith</entry>
+			<entry>Writh</entry>
+			<entry>Zith</entry>
+			<entry>Scree</entry>
+			<entry>Seraphic</entry>
+			<entry>Sprig</entry>
+			<entry>Teleth</entry>
+		</list>
+		<list type="genders">
+			<entry>male</entry>
+			<entry>female</entry>
+      <entry>none</entry>
+			<entry>neutral</entry>
+		</list>
+		<list type="roomproperties">
+			<entry>"no attack"</entry>
+			<entry>"no steal"</entry>
+			<entry>"no magic"</entry>
+			<entry>"no bump"</entry>
+			<entry>"no paralyze"</entry>
+			<entry>"no teleport"</entry>
+			<entry>"no clear"</entry>
+			<entry>"login"</entry>
+			<entry>"hospital"</entry>
+			<entry>"mechs allowed"</entry>
+		</list>
+  <list type="commonammotypes">
+    <entry>blackpowder</entry>
+    <entry>CrossbowBolt</entry>
+    <entry>22longmag</entry>
+    <entry>45acp</entry>
+    <entry>12gshotgun_shell</entry>
+    <entry>10gshotgun_shell</entry>
+    <entry>12gshotgun_clip</entry>
+    <entry>10gshotgun_clip</entry>
+    <entry>sixshooter_roundclip</entry>
+    <entry>44magnum_round</entry>
+    <entry>44magnum_clip</entry>
+    <entry>357magnum_round</entry>
+    <entry>357magnum_clip</entry>
+    <entry>357magnum_roundclip</entry>
+    <entry>tesla_clip</entry>
+    <entry>5.6_assaultrifle</entry>
+    <entry>blastercell</entry>
+    <entry>blastercell_large</entry>
+    <entry>solarcell_clip</entry>
+    <entry>plasma_pack</entry>
+    <entry>plasma_pack_large</entry>
+    <entry>40wattplasmarifle</entry>
+  </list>
+	</stellarmap>
